@@ -1,0 +1,39 @@
+<html>
+  <head>
+    <title>SA Solu&ccedil;&otilde;es</title>
+
+    <%= stylesheet_link_tag "application"  %>
+  </head>
+  <body>
+    <div id="page">
+      <img src="images/application/bg_top.jpg" alt=" " width="1024" />
+
+      <div id="page_content">
+
+        <div id="cabecalho">
+        </div>
+
+        <div id="mainMenu">
+          <ul>
+            <li><a href="#">Início</a></li>
+            <li><a href="#">Produtos</a></li>
+            <li><a href="#">Software</a></li>
+            <li><a href="#">Empresa</a></li>
+            <li><a href="#">Contato</a></li>
+          </ul>
+        </div>
+
+        <br /> 
+        <div id="conteudo">
+          <%= yield %>
+        </div>
+      </div>
+
+      <img src="images/application/rodape_top.jpg" alt=" " width="1024"/>
+      <div id="rodape">
+      </div>
+      <img src="images/application/rodape_bot.jpg" alt=" " width="1024"/>
+    </div>
+
+  </body>
+</html>

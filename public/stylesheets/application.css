@@ -1,0 +1,85 @@
+body{
+   background-color: #ddd;
+   letter-spacing: 1px;
+   font-weight: lighter;
+
+   height: 100%;
+   width: 100%;
+   padding:0x;
+   margin: 0px;
+   
+
+}
+
+/* --------------------------------------------- */
+
+div#page{
+  background: url(../images/application/bg_mid.jpg) repeat-y;
+  height:1480px;
+  width:1024px;
+  position: absolute;
+  left:50%;
+  margin-left: -512px; 
+
+}
+
+div#page div#page_content{
+  padding: 0px 40px;
+}
+
+div#page div#cabecalho{  
+  height: 200px;
+  
+}
+
+div#page div#mainMenu{
+  height:50px;
+  line-height: 50px;
+  background: #aaa;
+  font-size: 28px;
+  color:white;
+}
+
+div#page div#mainMenu ul{
+    list-style: none;
+    height:100%;
+    
+}
+
+div#page div#mainMenu li{
+    display: block;
+    float:left;
+    height:100%;
+    
+    text-align: center;
+}
+
+div#page div#mainMenu a:link,
+div#page div#mainMenu a:visited{
+  text-decoration: none;
+  display: block;
+  padding: 0px 25px;
+  color: #FFF;
+  text-shadow: #666 3px 1px 5px;
+}
+
+div#page div#mainMenu a:hover{
+   text-decoration: none;
+   text-shadow: #000 3px 1px 5px;
+   background: #bbb;
+}
+
+
+div#page div#conteudo{
+  background: url(../images/application/corpo.png) no-repeat;
+  padding: 5px 10px;
+  height: 885px;
+
+}
+
+div#page div#rodape{
+  background: url(../images/application/rodape_mid.jpg) repeat-y;
+  height: 170px;
+}
+
+
