@@ -1,0 +1,51 @@
+<h1>New produto</h1>
+
+<% form_for(@produto) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :nome %><br />
+    <%= f.text_field :nome %>
+  </p>
+  <p>
+    <%= f.label :titulo %><br />
+    <%= f.text_field :titulo %>
+  </p>
+  <p>
+    <%= f.label :descricao %><br />
+    <%= f.text_area :descricao %>
+  </p>
+  <p>
+    <%= f.label :linkFabricante %><br />
+    <%= f.text_field :linkFabricante %>
+  </p>
+  <p>
+    <%= f.label :marca %><br />
+    <%= f.text_field :marca %>
+  </p>
+  <p>
+    <%= f.label :modelo %><br />
+    <%= f.text_field :modelo %>
+  </p>
+  <p>
+    <%= f.label :preco %><br />
+    <%= f.text_field :preco %>
+  </p>
+  <p>
+    <%= f.label :categoria %><br />
+    <%= select('Produtos', 'categoria_id', Categoria.all.collect {|p| [ p.nome, p.id ] }) %>
+  </p>
+  <p>
+    <%= f.label :sub_categoria %><br />
+    <%= select('Produtos', 'sub_categoria_id', SubCategoria.all.collect {|p| [ p.nome, p.id ] }) %>
+  </p>
+  <p>
+    <%= f.label :promocao %><br />
+    <%= f.check_box :promocao %>
+  </p>
+  <p>
+    <%= f.submit 'Create' %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', produtos_path %>

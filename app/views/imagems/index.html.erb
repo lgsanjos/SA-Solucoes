@@ -1,0 +1,24 @@
+<h1>Listing imagems</h1>
+
+<table>
+  <tr>
+    <th>Titulo</th>
+    <th>Caminho</th>
+    <th>Produto</th>
+  </tr>
+
+<% @imagems.each do |imagem| %>
+  <tr>
+    <td><%=h imagem.titulo %></td>
+    <td><%=h imagem.caminho %></td>
+    <td><%=h imagem.produto %></td>
+    <td><%= link_to 'Show', imagem %></td>
+    <td><%= link_to 'Edit', edit_imagem_path(imagem) %></td>
+    <td><%= link_to 'Destroy', imagem, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New imagem', new_imagem_path %>

@@ -1,0 +1,24 @@
+<h1>Editing imagem</h1>
+
+<% form_for(@imagem) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :titulo %><br />
+    <%= f.text_field :titulo %>
+  </p>
+  <p>
+    <%= f.label :caminho %><br />
+    <%= f.text_field :caminho %>
+  </p>
+  <p>
+    <%= f.label :produto %><br />
+    <%= f.text_field :produto %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @imagem %> |
+<%= link_to 'Back', imagems_path %>

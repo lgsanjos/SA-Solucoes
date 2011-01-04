@@ -1,2 +1,30 @@
-<h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
+<% content_for :head do %>
+  <%= stylesheet_link_tag "home" %>
+<% end %>
+
+<div>
+  <%
+  fileName = ''
+  @produtos.each do |p|
+    # TODO: Otimizar consulta
+    img = Imagem.find(:first, :conditions => ['produto_id = (?)', p.id.to_s])
+    
+    fileName = "upload/#{img.caminho}"
+  %>
+
+    <div class="produto_promocao">
+       <a href="#">
+         <img src="<%= fileName %>" alt="" border="0"/>
+       </a>
+      <p>
+        <a href="#">
+          <%= p.titulo %>
+          <br />
+          R$ <%= p.preco %>
+        </a>
+      </p>
+    </div>
+  <%
+  end
+  %>
+</div>

@@ -1,0 +1,18 @@
+<p>
+  <b>Titulo:</b>
+  <%=h @imagem.titulo %>
+</p>
+
+<p>
+  <b>Caminho:</b>
+  <%=h @imagem.caminho %>
+</p>
+
+<p>
+  <b>Produto:</b>
+  <%=h @imagem.produto %>
+</p>
+
+
+<%= link_to 'Edit', edit_imagem_path(@imagem) %> |
+<%= link_to 'Back', imagems_path %>

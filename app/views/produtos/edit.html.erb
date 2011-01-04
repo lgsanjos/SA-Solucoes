@@ -1,0 +1,52 @@
+<h1>Editing produto</h1>
+
+<% form_for(@produto) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :nome %><br />
+    <%= f.text_field :nome %>
+  </p>
+  <p>
+    <%= f.label :titulo %><br />
+    <%= f.text_field :titulo %>
+  </p>
+  <p>
+    <%= f.label :descricao %><br />
+    <%= f.text_field :descricao %>
+  </p>
+  <p>
+    <%= f.label :linkFabricante %><br />
+    <%= f.text_field :linkFabricante %>
+  </p>
+  <p>
+    <%= f.label :marca %><br />
+    <%= f.text_field :marca %>
+  </p>
+  <p>
+    <%= f.label :modelo %><br />
+    <%= f.text_field :modelo %>
+  </p>
+  <p>
+    <%= f.label :preco %><br />
+    <%= f.text_field :preco %>
+  </p>
+  <p>
+    <%= f.label :categoria %><br />
+    <%= f.text_field :categoria %>
+  </p>
+  <p>
+    <%= f.label :sub_categoria %><br />
+    <%= f.text_field :sub_categoria %>
+  </p>
+  <p>
+    <%= f.label :promocao %><br />
+    <%= f.check_box :promocao %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @produto %> |
+<%= link_to 'Back', produtos_path %>
