@@ -1,53 +1,44 @@
-<p>
-  <b>Nome:</b>
-  <%=h @produto.nome %>
-</p>
+<% content_for :head do %>
+  <%= stylesheet_link_tag "produtos" %>
+<% end %>
 
-<p>
-  <b>Titulo:</b>
-  <%=h @produto.titulo %>
-</p>
+<div id="produtoProfile">
+  <div id="content">
+    <h1><%= @produto.nome %></h1>
+    <h2><%= "#{@produto.titulo} - R$ #{@produto.preco}" %></h2>
 
-<p>
-  <b>Descricao:</b>
-  <%=h @produto.descricao %>
-</p>
+    <table width="100%">
+      <thead>
+        <th>
+          <td></td>
+          <td></td>
+          <td></td>
+        </th>
+      </thead>
 
-<p>
-  <b>Linkfabricante:</b>
-  <%=h @produto.linkFabricante %>
-</p>
+      <tbody>
+        <tr>
+          <td rowspan="5" colspan="2"><%= image_tag @produto.get_rand_image_path, :alt => @produto.nome %></td>
+          <td><p class="titulo">Nome:</p> <%= @produto.nome %></td>
+        </tr>
+        <tr>
+          <td><p class="titulo">Modelo:</p> <%= @produto.titulo %></td>
+        </tr>
+        <tr>
+          <td><p class="titulo">Pre&ccedil;o:</p> R$ <%= @produto.preco %></td>
+        </tr>
+        <tr>
+          <td><p class="titulo">Marca:</p> <%= @produto.marca %></td>
+        </tr>
+        <tr>
+          <td><p class="titulo">Fabricante:</p> <%= @produto.linkFabricante %></td>
+        </tr>
 
-<p>
-  <b>Marca:</b>
-  <%=h @produto.marca %>
-</p>
+        <tr>
+          <td colspan="3" class="descricao"><p class="titulo">Descri&ccedil;&atilde;o:</p><br /><%= @produto.descricao %></td>
+        </tr>
 
-<p>
-  <b>Modelo:</b>
-  <%=h @produto.modelo %>
-</p>
-
-<p>
-  <b>Preco:</b>
-  <%=h @produto.preco %>
-</p>
-
-<p>
-  <b>Categoria:</b>
-  <%=h @produto.categoria %>
-</p>
-
-<p>
-  <b>Sub categoria:</b>
-  <%=h @produto.sub_categoria %>
-</p>
-
-<p>
-  <b>Promocao:</b>
-  <%=h @produto.promocao %>
-</p>
-
-
-<%= link_to 'Edit', edit_produto_path(@produto) %> |
-<%= link_to 'Back', produtos_path %>
+      </tbody>
+    </table>
+  </div>
+</div>

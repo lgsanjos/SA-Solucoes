@@ -1,0 +1,197 @@
+div.produtos_menu{
+    width: 306px;
+    height: 747px;
+    
+
+    float: left;
+}
+
+div.produtos_menu div#top{
+    background: url(../images/produtos/menu_top.png) no-repeat;
+    height:24px;
+    
+}
+
+div.produtos_menu div#middle{
+    padding: 0px;
+    margin: 0px;
+
+    background: url(../images/produtos/menu_mid.png) repeat-y;
+    background-position: 0px 0px;
+    height: 100%;
+}
+
+div.produtos_menu div#bottom{
+    background: url(../images/produtos/menu_bot.png) no-repeat;
+    height: 24px;
+}
+
+div#produtos div.item{
+    background: url(../images/produtos/item_bg.png) no-repeat;
+    height: 150px;
+    width: 600px;
+
+    padding: 10px 0px 0px 10px;
+
+}
+
+
+
+div#produtos div#paginas{
+  clear: both;
+  float: right;
+  margin-top: 15px;
+  margin-right: 15px;
+}
+
+div#produtos div#paginas a:link,
+div#produtos div#paginas a:visited{
+
+
+  color:white;
+  font-weight: bolder;
+  text-shadow: #333 3px 1px 5px;
+  
+  line-height: 20px;
+  text-align: center;
+  text-decoration: none;
+
+  padding: 5px;
+  margin: 5px;
+  margin-right: 0px;
+  
+}
+
+div#produtos div#paginas a:hover{
+  text-decoration: underline;
+  color: #EEE;
+  text-shadow: #000 3px 1px 5px;
+  
+}
+
+div#produtos div#paginas a.selected{
+
+  color: #EEE;
+  text-shadow: #000 3px 1px 5px;
+}
+
+div#produtos div.coluna{
+  float:left;
+  
+  height: 100%;
+  overflow: hidden;
+}
+
+div#produtos div.coluna p{
+  margin: 0px;
+  padding:2px;
+}
+div#produtos div.coluna p.nome{
+  color:red;
+  text-shadow: #AAA 3px 1px 5px;
+  
+}
+
+div#produtos div.coluna p.preco{
+  
+}
+
+div#produtos div.coluna p.descricao{
+  overflow: hidden;
+  font-size: 75%;
+  
+}
+
+div#produtos ul.menu{
+  list-style: none;
+  padding-left:30px;
+}
+
+div#produtos ul.menu li{
+  padding: 1px;
+  margin:0px;
+}
+
+div#produtos ul.menu li.categoria a:link,
+div#produtos ul.menu li.categoria a:visited{
+  text-decoration: none;
+  font-size : 110%;
+  color: red;
+  text-shadow: #AAA 3px 1px 5px;
+}
+
+div#produtos ul.menu li.categoria a:hover{
+  text-decoration: underline;
+  text-shadow: #666 3px 1px 5px;
+}
+
+div#produtos ul.menu li.subCategoria{
+  margin-left:20px;
+}
+
+div#produtos ul.menu li.subCategoria a:link,
+div#produtos ul.menu li.subCategoria a:visited{
+  text-decoration: none;
+  color:black;
+}
+
+div#produtos ul.menu li.subCategoria a:hover{
+  text-decoration: underline;
+  text-shadow: #666 3px 1px 5px;
+}
+
+/*** PRODUTO PROFILE ***/
+
+div#produtoProfile{
+  height: 100%;
+  margin-top: 30px;
+  
+}
+
+div#produtoProfile div#content{
+  background: url(../images/FullBox_bg.png) no-repeat;
+  padding: 20px;
+  height: 800px;
+}
+
+div#produtoProfile div#content h1{
+  font-size: 180%;
+  line-height: 180%;
+  font-size: 180%;
+
+  margin-top:20px;
+
+  color: red;
+  text-shadow: #AAA 3px 1px 5px;
+}
+
+div#produtoProfile div#content h2{
+  font-size: 130%;
+  line-height: 130%;
+  font-size: 130%;
+
+  margin-bottom:20px;
+  color: #AAA;
+}
+
+div#produtoProfile div#content p.titulo{
+  font-weight: bold;
+  font-size: 110%;
+  display: inline;
+}
+
+div#produtoProfile div#content .descricao{
+  padding: 30px;
+
+}
+
+div#produtoProfile div#description{
+  background: url(../images/FullBox_bg_mid.png) repeat-y;
+  padding: 20px;
+  height: 360px;
+}
+
+div#produtoProfile div#bot{
+  background: url(../images/FullBox_bg_bot.png) no-repeat;
+  height: 20px;
+}

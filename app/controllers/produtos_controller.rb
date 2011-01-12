@@ -2,7 +2,48 @@ class ProdutosController < ApplicationController
   # GET /produtos
   # GET /produtos.xml
   def index
-    @produtos = Produto.all
+    logger.debug "Solicitando INDEX"
+
+    if params[:pagina] && params[:pagina].to_i > 0
+      @pagina = params[:pagina]
+    else
+      @pagina = 1    
+    end
+    logger.debug "@pagina = " + @pagina.to_s
+
+
+    @selSubCat = (params[:subcategorias]) ? params[:subcategorias] : 'pagina'
+    @selCat = (params[:categorias]) ? params[:categorias] : 'pagina'
+
+    logger.debug "@selectedSubCat = " + @selSubCat.to_s
+    logger.debug "@selectedCat = " + @selCat.to_s
+
+    @produtos = Produto.find(:all,
+                             :joins => [:sub_categoria, :categoria],
+                             :conditions => [
+                                              ' categorias.nome LIKE ? AND sub_categorias.nome LIKE ?',
+                                              '%'+params[:categorias].to_s+'%', '%'+params[:subcategorias].to_s+'%'
+                                            ],
+                             :offset => ((@pagina.to_i - 1) * 5),
+                             :limit => 5
+                            )
+
+    @totPag = Produto.count_by_sql(
+                          "SELECT Count(`produtos`.id) FROM `produtos`
+                                  INNER JOIN `sub_categorias` ON `sub_categorias`.id = `produtos`.sub_categoria_id 
+                                  INNER JOIN `categorias` ON `categorias`.id = `produtos`.categoria_id
+                                  WHERE ( categorias.nome LIKE '%#{params[:categorias]}%'
+                                  AND sub_categorias.nome LIKE '%#{params[:subcategorias]}%')")
+    @totPag = @totPag / 5
+    @totPag = @totPag.next if @totPag % 5 > 0
+
+    logger.debug "@totPag = " + @totPag.to_s
+    @totPag = 1 if @totPag == 0
+
+
+    @categorias = Categoria.all
+    @subCategorias = SubCategoria.all
+
 
     respond_to do |format|
       format.html # index.html.erb
@@ -13,7 +54,13 @@ class ProdutosController < ApplicationController
   # GET /produtos/1
   # GET /produtos/1.xml
   def show
-    @produto = Produto.find(params[:id])
+    id = params[:id]
+
+    if id.to_i > 0
+      @produto = Produto.find(id)
+    else
+      @produto = Produto.find(:first, :conditions => [ 'nome like ?', '%' + id + '%'])
+    end
 
     respond_to do |format|
       format.html # show.html.erb

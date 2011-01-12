@@ -1,18 +1,29 @@
 ActionController::Routing::Routes.draw do |map|
   map.resources :imagems
-
-  map.resources :produtos
-
-  map.resources :produtos
-
+ 
   map.resources :sub_categorias
 
   map.resources :categorias
 
-  map.resources :imagems
+  map.resources :software
+
+  map.resources :contatos
+
+  map.resources :empresa
+
+  map.connect 'produtos/new', :controller => 'produtos', :action => 'new'
+  map.connect 'produtos/visualizar/:id', :controller => 'produtos', :action => 'show'
+  map.connect ':produtos/:pagina', :controller => 'produtos', :action => 'index'
+  map.connect 'produtos/pagina/:pagina', :controller => 'produtos', :action => 'index'
 
   map.resources :produtos
+ 
 
+  map.connect 'produtos/:categorias/:pagina', :controller => 'produtos', :action => 'index'
+  map.connect 'produtos/:categorias/:subcategorias/:pagina', :controller => 'produtos', :action => 'index'
+
+  
+  
   # The priority is based upon order of creation: first created -> highest priority.
 
   # Sample of regular route:

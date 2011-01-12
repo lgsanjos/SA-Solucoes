@@ -2,23 +2,18 @@
   <%= stylesheet_link_tag "home" %>
 <% end %>
 
-<div>
-  <%
-  fileName = ''
-  @produtos.each do |p|
-    # TODO: Otimizar consulta
-    img = Imagem.find(:first, :conditions => ['produto_id = (?)', p.id.to_s])
-    
-    fileName = "upload/#{img.caminho}"
-  %>
+<div style="margin-top:20px;">
+  <%@produtos.each do |p| %>
 
     <div class="produto_promocao">
-       <a href="#">
-         <img src="<%= fileName %>" alt="" border="0"/>
-       </a>
+      <div class="produto_imagem">
+         <a href="<%= url_for :controller => :produtos, :action => :visualizar, :id => p.id %>">
+           <%= image_tag p.get_rand_image_path, :alt => p.titulo, :border => 0 %>
+         </a>
+      </div>
       <p>
-        <a href="#">
-          <%= p.titulo %>
+        <a href="<%= url_for :controller => :produtos, :action => :visualizar, :id => p.nome %>">
+          <%= "#{p.titulo[0..18]} #{' ...' if p.titulo.length > 18}" %>
           <br />
           R$ <%= p.preco %>
         </a>

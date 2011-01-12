@@ -2,42 +2,45 @@
   index
 */
 
-.produto_promocao{
-   width: 280px;
-   height: 340px;
+div.produto_promocao{
+   width: 295px;
+   height: 270px;
    overflow: hidden;
    
    border: 0px solid red;
-   margin: 10px;
-   margin-top: 30px;
+   margin-left: 8px;
+   margin-top: 10px;
 
    float:left;
    text-align: center;
+   background: url(../images/home/produto_bg.png) no-repeat;
 }
 
-.produto_promocao a:link,
-.produto_promocao a:visited{
+div.produto_promocao a:link,
+div.produto_promocao a:visited{
   text-decoration: none;
   color: black;
-  font-size: 120%;
+  font-size: 110%;
 }
 
-.produto_promocao a:hover{
+div.produto_promocao a:hover{
   text-decoration: underline;
   color: gray;
 }
 
-.produto_promocao img{
-  border: 0px dashed green;
-  margin: 10px;
-  height: 260px;  
+div.produto_imagem{
+  margin-top: 10px;
+  height: 210px;
+  border: 0px dashed black;
+}
 
-  display: block;
+div.produto_promocao img{
   overflow: hidden;
 
 }
 
-.produto_promocao p{
-
+div.produto_promocao p{
+  margin: 0px;
+  padding:0px;
 
 }

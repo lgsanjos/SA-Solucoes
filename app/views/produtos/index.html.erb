@@ -1,38 +1,81 @@
-<h1>Listing produtos</h1>
-
-<table>
-  <tr>
-    <th>Nome</th>
-    <th>Titulo</th>
-    <th>Descricao</th>
-    <th>Linkfabricante</th>
-    <th>Marca</th>
-    <th>Modelo</th>
-    <th>Preco</th>
-    <th>Categoria</th>
-    <th>Sub categoria</th>
-    <th>Promocao</th>
-  </tr>
-
-<% @produtos.each do |produto| %>
-  <tr>
-    <td><%=h produto.nome %></td>
-    <td><%=h produto.titulo %></td>
-    <td><%=h produto.descricao %></td>
-    <td><%=h produto.linkFabricante %></td>
-    <td><%=h produto.marca %></td>
-    <td><%=h produto.modelo %></td>
-    <td><%=h produto.preco %></td>
-    <td><%=h produto.categoria %></td>
-    <td><%=h produto.sub_categoria %></td>
-    <td><%=h produto.promocao %></td>
-    <td><%= link_to 'Show', produto %></td>
-    <td><%= link_to 'Edit', edit_produto_path(produto) %></td>
-    <td><%= link_to 'Destroy', produto, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
+<% content_for :head do %>
+  <%= stylesheet_link_tag "produtos" %>
 <% end %>
-</table>
 
-<br />
+<div id="produtos">
+  <div>
+    <div class="produtos_menu">
+      <div id="top"></div>
+      <div id="middle">
+        <ul class="menu">
+            <li class='categoria'><%= link_to 'Todos', {:controller => :produtos } %></li>
+            <% @categorias.each do |c|%>
+            <li class='categoria'><%= link_to c.nome, {:controller => :produtos, :action => c.nome, :id => 1 } %></li>
+              <% @subCategorias.each do |sc|%>
+                <% if (c.id == sc.categoria.id) %>
+                   <%= "<li class='subCategoria'>" %>
+                   <%= link_to sc.nome, {:controller => "Produtos/" + c.nome, :action => sc.nome, :id => 1 } %>
+                   <%= "</li>" %>
+                <% end %>
+            <% end %>
+            <li>&nbsp;</li>
+            
+          <% end %>
+        </ul>
+      </div>
+      <div id="bottom"></div>
+    </div>
 
-<%= link_to 'New produto', new_produto_path %>
+    <div style="float:left; height: 800px; width:200px;">
+    <% @produtos.each do |p| %>
+      <div class="item">
+        <div class="coluna" style="width:140px;">
+          <%= link_to image_tag( p.get_rand_image_path, :height => 130, :alt => p.titulo, :border => 0), { :action => :visualizar, :id => p.id} %>
+        </div>
+
+        <div class="coluna" style="width:435px; margin-left:10px;">
+          <table>
+            <th>
+              <td></td>
+              <td></td>
+            </th>
+            <tr>
+              <td colspan="2"><p class="nome"><%= link_to p.nome, { :action => :visualizar, :id => p.id} %></p></td>
+            </tr>
+            <tr>
+              <td><p class="titulo"><%=p.titulo%></p></td>
+              <td><p class="preco">R$ <%=p.preco%></p></td>
+            </tr>
+          </table>
+          <p class="descricao"><%=p.descricao%></p>
+        </div>
+      </div>
+    <% end %>
+    </div>
+  </div>
+
+    <div id="paginas">
+      <% if @pagina.to_i > 1 %>
+        <%= link_to 'Voltar', {:controller => :produtos, :action => @selCat.to_s, :id => @pagina.to_i - 1 } %>
+      <% end %>
+
+      <%
+        lista = ""
+        logger.warn "pag= " + @totPag.to_s
+        1.upto(@totPag) { |i|
+
+          lista = lista + "#{link_to i, {:controller => :produtos,
+                                         :action => @selCat,
+                                         :id => i
+                                        },
+                                         :class => (i === @pagina.to_i ? 'selected' : '')} "
+                             }
+      %>
+      <%=lista%>
+
+      <% if @totPag.to_i > @pagina.to_i %>
+        <%= link_to "Avancar", {:controller => :produtos, :action => @selCat, :id => @pagina.to_i + 1 } %>
+      <% end %>
+    </div>
+
+</div>

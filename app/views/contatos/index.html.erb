@@ -1,0 +1,131 @@
+<% content_for :head do %>
+  <link rel="stylesheet" type="text/css" href="http://static.flowplayer.org/tools/css/tabs-no-images.css"/>
+  <% #TODO: Refatorar o css de produtos, para que background comum fique na aplicacao  %>
+  <%= stylesheet_link_tag "produtos" %>
+  <%= stylesheet_link_tag "contato" %>
+  
+<% end %>
+
+<div id="produtoProfile">
+  <div id="content" style="padding-right:40px;">
+
+    <ul class="css-tabs">
+      <li><a href="">Comercial</a></li>
+      <li><a href="">Dúvidas / Sugestões</a></li>
+    </ul>
+
+    <div class="css-panes">
+      <div style="height:720px;">
+        <h1>Contato comercial</h1>
+        <h2>Solicite uma visita de nossos vendedores</h2>
+
+        <% if flash[:notice] %>
+            <div id="notice">
+              <%= flash[:notice] %>
+            </div>
+
+            <script>
+                setTimeout(function(){
+                  $("#notice").fadeout("slow");
+                }, 3000);
+            </script>
+        <% end %>
+        
+        <% form_for(@contato) do |f| %>
+        <input type="hidden" name="contato[motivo]" value="COMERCIAL" />
+        <table class="contato">
+          <tr>
+            <td>Nome:</td>
+            <td><%= f.text_field :nome, :size => 20 %></td>
+          </tr>
+          <tr>
+              <td>Empresa:</td>
+            <td><%= f.text_field :nomeEmpresa, :size => 12 %></td>
+          </tr>
+          <tr>
+            <td>E-Mail:</td>
+            <td><%= f.text_field :email, :size => 30 %></td>
+          </tr>
+          <tr>
+            <td>Telefone:</td>
+            <td><%= f.text_field :telefone, :size => 12 %></td>
+          </tr>
+          <tr>
+            <td>Celular:</td>
+            <td><%= f.text_field :celular, :size => 12 %></td>
+          </tr>
+          <tr>
+            <td>Cidade:</td>
+            <td><%= f.text_field :cidade, :size => 30 %></td>
+          </tr>
+          <tr>
+            <td>Endere&ccedil;o:</td>
+            <td><%= f.text_field :endereco, :size => 27 %></td>
+          </tr>
+          <tr>
+            <td valign="top">Mensagem:</td>
+            <td><%= f.text_area :mensagem, :cols => 60, :rows => 13 %></td>
+          </tr>
+          <tr>
+            <td><%= submit_tag "Enviar" %></td>
+          </tr>
+        </table>
+        <% end %>
+      </div>
+
+      
+      <div style="height:720px;">
+        <h1>Contato comercial</h1>
+        <h2>Solicite uma visita de nossos vendedores</h2>
+
+        <% if flash[:notice] %>
+            <div id="notice">
+              <%= flash[:notice] %>
+            </div>
+
+            <script>
+                setTimeout(function(){
+                  $("#notice").fadeout("slow");
+                }, 3000);
+            </script>
+        <% end %>
+
+        <% form_for(@contato, :action => :enviar) do |f| %>
+        <input type="hidden" name="contato[motivo]" value="DUVIDA" />
+        <table class="contato">
+          <tr>
+            <td>Nome:</td>
+            <td><%= f.text_field :nome, :size => 20 %></td>
+          </tr>
+          <tr>
+            <td>E-Mail:</td>
+            <td><%= f.text_field :email, :size => 30 %></td>
+          </tr>
+          <tr>
+            <td>Telefone:</td>
+            <td><%= f.text_field :telefone, :size => 12 %></td>
+          </tr>
+          <tr>
+            <td valign="top">Mensagem:</td>
+            <td><%= f.text_area :mensagem, :cols => 60, :rows => 20 %></td>
+          </tr>
+          <tr>
+            <td><%= submit_tag "Enviar" %></td>
+          </tr>
+        </table>
+        <% end %>
+
+      </div>
+    </div>
+    
+  </div>
+
+</div>
+
+
+<script>
+  $(function() {
+	// :first selector is optional if you have only one tabs on the page
+	$(".css-tabs:first").tabs(".css-panes:first > div");
+  });
+</script>

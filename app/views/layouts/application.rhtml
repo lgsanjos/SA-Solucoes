@@ -5,12 +5,14 @@
   <head>
     <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
     <title>SA Solu&ccedil;&otilde;es</title>
+    <%= stylesheet_link_tag "reset"  %>
     <%= stylesheet_link_tag "application"  %>
+    <script src="http://cdn.jquerytools.org/1.2.5/jquery.tools.min.js"></script>
     <%= yield :head  %>
   </head>
-  <body>
+  <body bgcolor="#ddd">
     <div id="page">
-      <img src="images/application/bg_top.jpg" alt=" " width="1024" />
+      <img src="<%= base_path %>/images/application/bg_top.jpg" alt=" " width="1024" />
 
       <div id="page_content">
 
@@ -19,24 +21,26 @@
 
         <div id="mainMenu">
           <ul>
-            <li><a href="#">Início</a></li>
-            <li><a href="#">Produtos</a></li>
-            <li><a href="#">Software</a></li>
-            <li><a href="#">Empresa</a></li>
-            <li><a href="#">Contato</a></li>
+            <li><a href="<%=  url_for :action => :index, :controller => :home %>">Início</a></li>
+            <li><a href="<%=  url_for :action => :index, :controller => :produtos %>">Produtos</a></li>
+            <li><a href="<%=  url_for :action => :index, :controller => :software %>">Software</a></li>
+            <li><a href="<%=  url_for :action => :index, :controller => :empresa %>">Empresa</a></li>
+            <li><a href="<%=  url_for :action => :index, :controller => :contatos %>">Contato</a></li>
           </ul>
         </div>
 
         <br /> 
         <div id="conteudo">
-          <%= yield %>
+          <div id="pagina">
+            <%= yield %>
+          </div>
         </div>
       </div>
 
-      <img src="images/application/rodape_top.jpg" alt=" " width="1024"/>
+      <img src="<%= base_path %>/images/application/rodape_top.jpg" alt=" " width="1024"/>
       <div id="rodape">
       </div>
-      <img src="images/application/rodape_bot.jpg" alt=" " width="1024"/>
+      <img src="<%= base_path %>/images/application/rodape_bot.jpg" alt=" " width="1024"/>
     </div>
 
   </body>

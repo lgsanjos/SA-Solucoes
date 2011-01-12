@@ -15,8 +15,9 @@ body{
 
 div#page{
   background: url(../images/application/bg_mid.jpg) repeat-y;
-  height:1480px;
+  height:1450px;
   width:1024px;
+  overflow: hidden;
   position: absolute;
   left:50%;
   margin-left: -512px; 
@@ -73,8 +74,14 @@ div#page div#mainMenu a:hover{
 div#page div#conteudo{
   background: url(../images/application/corpo.png) no-repeat;
   padding: 5px 10px;
+
   height: 885px;
 
+}
+
+div#page div#conteudo div#pagina{
+  margin-top: 25px;
+  margin-left: 8px;
 }
 
 div#page div#rodape{
