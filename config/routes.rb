@@ -1,4 +1,10 @@
 ActionController::Routing::Routes.draw do |map|
+
+
+  map.connect '/admin', :controller => :usuarios, :action => :login
+
+  map.resources :usuarios
+
   map.resources :imagems
  
   map.resources :sub_categorias
@@ -11,16 +17,16 @@ ActionController::Routing::Routes.draw do |map|
 
   map.resources :empresa
 
-  map.connect 'produtos/new', :controller => 'produtos', :action => 'new'
-  map.connect 'produtos/visualizar/:id', :controller => 'produtos', :action => 'show'
-  map.connect ':produtos/:pagina', :controller => 'produtos', :action => 'index'
-  map.connect 'produtos/pagina/:pagina', :controller => 'produtos', :action => 'index'
+  map.connect '/produtos/new', :controller => 'produtos', :action => 'new'
 
+  map.connect '/produtos/:pagina', :controller => 'produtos', :action => 'index'
+  map.connect '/produtos/pagina/:pagina', :controller => 'produtos', :action => 'index'
+  map.connect '/produtos/visualizar/:id', :controller => 'produtos', :action => 'show'
+  
   map.resources :produtos
  
-
-  map.connect 'produtos/:categorias/:pagina', :controller => 'produtos', :action => 'index'
-  map.connect 'produtos/:categorias/:subcategorias/:pagina', :controller => 'produtos', :action => 'index'
+  map.connect '/produtos/:categorias/:pagina', :controller => 'produtos', :action => 'index'
+  map.connect '/produtos/:categorias/:subcategorias/:pagina', :controller => 'produtos', :action => 'index'
 
   
   

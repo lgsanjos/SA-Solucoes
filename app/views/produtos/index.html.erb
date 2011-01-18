@@ -8,18 +8,19 @@
       <div id="top"></div>
       <div id="middle">
         <ul class="menu">
-            <li class='categoria'><%= link_to 'Todos', {:controller => :produtos } %></li>
+            <li>&nbsp;</li>
             <% @categorias.each do |c|%>
-            <li class='categoria'><%= link_to c.nome, {:controller => :produtos, :action => c.nome, :id => 1 } %></li>
+            <li class='categoria'><%= link_to c.nome, {:controller => :produtos, :action => c.nome, :id => 1 } %><p class="legenda">(Listar todas)</p></li>
               <% @subCategorias.each do |sc|%>
                 <% if (c.id == sc.categoria.id) %>
                    <%= "<li class='subCategoria'>" %>
-                   <%= link_to sc.nome, {:controller => "Produtos/" + c.nome, :action => sc.nome, :id => 1 } %>
+                   <%= link_to sc.nome, {:controller => "Produtos/" + c.nome, :action => sc.nome, :id => 1 } unless sc.blank? %>
                    <%= "</li>" %>
+                   
                 <% end %>
             <% end %>
             <li>&nbsp;</li>
-            
+            <li>&nbsp;</li>
           <% end %>
         </ul>
       </div>

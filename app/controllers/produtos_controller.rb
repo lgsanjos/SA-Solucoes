@@ -1,4 +1,6 @@
 class ProdutosController < ApplicationController
+
+  before_filter :check_permission, :except => [:index, :show]
   # GET /produtos
   # GET /produtos.xml
   def index
@@ -73,15 +75,13 @@ class ProdutosController < ApplicationController
   def new
     @produto = Produto.new
 
-    respond_to do |format|
-      format.html # new.html.erb
-      format.xml  { render :xml => @produto }
-    end
+    render :layout => false
   end
 
   # GET /produtos/1/edit
   def edit
     @produto = Produto.find(params[:id])
+    render :layout => false
   end
 
   # POST /produtos
@@ -89,15 +89,7 @@ class ProdutosController < ApplicationController
   def create
     @produto = Produto.new(params[:produto])
 
-    respond_to do |format|
-      if @produto.save
-        format.html { redirect_to(@produto, :notice => 'Produto was successfully created.') }
-        format.xml  { render :xml => @produto, :status => :created, :location => @produto }
-      else
-        format.html { render :action => "new" }
-        format.xml  { render :xml => @produto.errors, :status => :unprocessable_entity }
-      end
-    end
+    redirect_to :action => :new
   end
 
   # PUT /produtos/1

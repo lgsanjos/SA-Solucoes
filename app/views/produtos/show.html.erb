@@ -19,26 +19,21 @@
       <tbody>
         <tr>
           <td rowspan="5" colspan="2"><%= image_tag @produto.get_rand_image_path, :alt => @produto.nome %></td>
-          <td><p class="titulo">Nome:</p> <%= @produto.nome %></td>
+          <td valign="top"><p class="titulo">Nome:</p> <%= @produto.nome %></td>
         </tr>
         <tr>
-          <td><p class="titulo">Modelo:</p> <%= @produto.titulo %></td>
+          <td valign="top"><p class="titulo">Modelo:</p> <%= @produto.titulo %></td>
         </tr>
         <tr>
-          <td><p class="titulo">Pre&ccedil;o:</p> R$ <%= @produto.preco %></td>
+          <td valign="top"><p class="titulo">Pre&ccedil;o:</p> R$ <%= @produto.preco %></td>
         </tr>
         <tr>
-          <td><p class="titulo">Marca:</p> <%= @produto.marca %></td>
+          <td valign="top"><p class="titulo">Marca:</p> <%= @produto.marca %></td>
         </tr>
-        <tr>
-          <td><p class="titulo">Fabricante:</p> <%= @produto.linkFabricante %></td>
-        </tr>
-
-        <tr>
-          <td colspan="3" class="descricao"><p class="titulo">Descri&ccedil;&atilde;o:</p><br /><%= @produto.descricao %></td>
-        </tr>
-
       </tbody>
     </table>
+    <div class="descricao">
+      <%= render :file => "public/produtos/_" + @produto.id.to_s + ".rhtml" %>
+    </div>
   </div>
 </div>

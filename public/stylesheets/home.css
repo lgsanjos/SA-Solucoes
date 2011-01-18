@@ -11,6 +11,8 @@ div.produto_promocao{
    margin-left: 8px;
    margin-top: 10px;
 
+   font-size:14px;
+
    float:left;
    text-align: center;
    background: url(../images/home/produto_bg.png) no-repeat;
@@ -20,7 +22,7 @@ div.produto_promocao a:link,
 div.produto_promocao a:visited{
   text-decoration: none;
   color: black;
-  font-size: 110%;
+  font-size: 100%;
 }
 
 div.produto_promocao a:hover{

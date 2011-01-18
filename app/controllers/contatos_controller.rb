@@ -1,5 +1,5 @@
 class ContatosController < ApplicationController
-
+   
   def index
     @contato = Contato.new
   end

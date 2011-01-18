@@ -1,0 +1,19 @@
+<h1>Administra&ccedil;&atilde;o</h1>
+
+<% form_for(@usuario, :url => {:action => :authenticate}) do |f| %>
+  <%= f.error_messages %>
+  <%= flash[:notice] %>
+  <p>
+    <%= f.label :login %><br />
+    <%= f.text_field :login %>
+  </p>
+  <p>
+    <%= f.label :senha %><br />
+    <%= f.text_field :senha %>
+  </p>
+  <p>
+    <%= f.submit 'Login' %>
+  </p>
+<% end %>
+
+<%= link_to 'Retornar', :controller => :home %>

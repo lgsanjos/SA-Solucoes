@@ -112,6 +112,14 @@ div#produtos ul.menu li{
   margin:0px;
 }
 
+div#produtos ul.menu li p.legenda{
+   font-size:90%;
+   color: #aaa;
+   letter-spacing: 1px;
+   display: inline;
+   padding-left:10px;
+}
+
 div#produtos ul.menu li.categoria a:link,
 div#produtos ul.menu li.categoria a:visited{
   text-decoration: none;
@@ -181,7 +189,12 @@ div#produtoProfile div#content p.titulo{
 }
 
 div#produtoProfile div#content .descricao{
-  padding: 30px;
+  margin: 0px;
+  
+  height: 340px;
+  width:100%;
+  overflow:  scroll;
+  
 
 }
 

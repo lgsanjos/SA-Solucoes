@@ -1,20 +1,23 @@
 <h1>Listing imagems</h1>
 
-<table>
+<table width="100%" border="1">
   <tr>
+    <th>Imagem</th>
     <th>Titulo</th>
     <th>Caminho</th>
     <th>Produto</th>
+    <th colspan="3">Acoes</th>
   </tr>
 
 <% @imagems.each do |imagem| %>
   <tr>
+    <td><%=  image_tag "upload/" + imagem.caminho, :height => 50 %></td>
     <td><%=h imagem.titulo %></td>
     <td><%=h imagem.caminho %></td>
-    <td><%=h imagem.produto %></td>
-    <td><%= link_to 'Show', imagem %></td>
-    <td><%= link_to 'Edit', edit_imagem_path(imagem) %></td>
-    <td><%= link_to 'Destroy', imagem, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%=h imagem.produto.nome %></td>
+    <td><%= link_to 'Visualizar', imagem %></td>
+    <td><%= link_to 'Editar', edit_imagem_path(imagem) %></td>
+    <td><%= link_to 'Apagar', imagem, :confirm => 'Tem certeza?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>
@@ -22,3 +25,4 @@
 <br />
 
 <%= link_to 'New imagem', new_imagem_path %>
+<%= link_to 'Voltar', :controller => :usuarios %>

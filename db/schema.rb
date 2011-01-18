@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110109211626) do
+ActiveRecord::Schema.define(:version => 20110114002356) do
 
   create_table "categorias", :force => true do |t|
     t.string   "nome"
@@ -43,7 +43,6 @@ ActiveRecord::Schema.define(:version => 20110109211626) do
   create_table "produtos", :force => true do |t|
     t.string   "nome"
     t.string   "titulo"
-    t.text     "descricao"
     t.string   "linkFabricante"
     t.string   "marca"
     t.string   "modelo"
@@ -53,12 +52,22 @@ ActiveRecord::Schema.define(:version => 20110109211626) do
     t.boolean  "promocao"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.text     "descricao"
   end
 
   create_table "sub_categorias", :force => true do |t|
     t.string   "nome"
     t.string   "descricao"
     t.integer  "categoria_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "usuarios", :force => true do |t|
+    t.string   "login"
+    t.string   "senha"
+    t.integer  "level"
+    t.string   "email"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

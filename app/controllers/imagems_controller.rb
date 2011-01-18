@@ -1,4 +1,7 @@
 class ImagemsController < ApplicationController
+
+  before_filter :check_permission, :except => [:index, :show]
+
   # GET /imagems
   # GET /imagems.xml
   def index
