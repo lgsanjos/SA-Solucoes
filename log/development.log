@@ -1,0 +1,56 @@
+# Logfile created on Wed Feb 09 19:59:46 -0200 2011  [4;36;1mSQL (0.9ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (23.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (1.7ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (319.9ms)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (4.2ms)[0m   [0;1mSHOW KEYS FROM `schema_migrations`[0m
+  [4;35;1mSQL (143.5ms)[0m   [0mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateProdutos (20110103144925)
+  [4;36;1mSQL (78.3ms)[0m   [0;1mCREATE TABLE `produtos` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `nome` varchar(255), `titulo` varchar(255), `descricao` text, `linkFabricante` varchar(255), `marca` varchar(255), `modelo` varchar(255), `preco` decimal, `categoria_id` int(11), `sub_categoria_id` int(11), `promocao` tinyint(1), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (12.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20110103144925')[0m
+Migrating to CreateImagems (20110103145438)
+  [4;36;1mSQL (59.4ms)[0m   [0;1mCREATE TABLE `imagems` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `titulo` varchar(255), `caminho` varchar(255), `produto_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (28.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20110103145438')[0m
+Migrating to CreateCategorias (20110103150432)
+  [4;36;1mSQL (53.5ms)[0m   [0;1mCREATE TABLE `categorias` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `nome` varchar(255), `descricao` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (18.8ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20110103150432')[0m
+Migrating to CreateSubCategorias (20110103150455)
+  [4;36;1mSQL (27.7ms)[0m   [0;1mCREATE TABLE `sub_categorias` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `nome` varchar(255), `descricao` varchar(255), `categoria_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (1.8ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20110103150455')[0m
+Migrating to CreateContatos (20110109211626)
+  [4;36;1mSQL (36.0ms)[0m   [0;1mCREATE TABLE `contatos` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `nome` varchar(255), `nomeEmpresa` varchar(255), `email` varchar(255), `telefone` varchar(255), `celular` varchar(255), `cidade` varchar(255), `endereco` varchar(255), `mensagem` text, `motivo` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (1.4ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20110109211626')[0m
+Migrating to CreateUsuarios (20110114002356)
+  [4;36;1mSQL (37.6ms)[0m   [0;1mCREATE TABLE `usuarios` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `login` varchar(255), `senha` varchar(255), `level` int(11), `email` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (3.4ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20110114002356')[0m
+  [4;36;1mSQL (13.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (29.3ms)[0m   [0mSHOW FIELDS FROM `categorias`[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mdescribe `categorias`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW KEYS FROM `categorias`[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mSHOW FIELDS FROM `contatos`[0m
+  [4;35;1mSQL (5.1ms)[0m   [0mdescribe `contatos`[0m
+  [4;36;1mSQL (17.7ms)[0m   [0;1mSHOW KEYS FROM `contatos`[0m
+  [4;35;1mSQL (6.6ms)[0m   [0mSHOW FIELDS FROM `imagems`[0m
+  [4;36;1mSQL (3.1ms)[0m   [0;1mdescribe `imagems`[0m
+  [4;35;1mSQL (6.8ms)[0m   [0mSHOW KEYS FROM `imagems`[0m
+  [4;36;1mSQL (1.8ms)[0m   [0;1mSHOW FIELDS FROM `produtos`[0m
+  [4;35;1mSQL (6.0ms)[0m   [0mdescribe `produtos`[0m
+  [4;36;1mSQL (5.6ms)[0m   [0;1mSHOW KEYS FROM `produtos`[0m
+  [4;35;1mSQL (1.2ms)[0m   [0mSHOW FIELDS FROM `sub_categorias`[0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1mdescribe `sub_categorias`[0m
+  [4;35;1mSQL (1.2ms)[0m   [0mSHOW KEYS FROM `sub_categorias`[0m
+  [4;36;1mSQL (2.8ms)[0m   [0;1mSHOW FIELDS FROM `usuarios`[0m
+  [4;35;1mSQL (9.9ms)[0m   [0mdescribe `usuarios`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW KEYS FROM `usuarios`[0m
+  [4;36;1mSQL (236.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (25.9ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2011-02-09 20:05:32) [GET]
+  [4;36;1mProduto Load (67.7ms)[0m   [0;1mSELECT * FROM `produtos` WHERE (`produtos`.`promocao` = 1) ORDER BY Rand() LIMIT 9[0m
+Rendering template within layouts/application
+Rendering home/index
+Completed in 1171ms (View: 177, DB: 330) | 200 OK [http://localhost/]

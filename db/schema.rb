@@ -43,6 +43,7 @@ ActiveRecord::Schema.define(:version => 20110114002356) do
   create_table "produtos", :force => true do |t|
     t.string   "nome"
     t.string   "titulo"
+    t.text     "descricao"
     t.string   "linkFabricante"
     t.string   "marca"
     t.string   "modelo"
@@ -52,7 +53,6 @@ ActiveRecord::Schema.define(:version => 20110114002356) do
     t.boolean  "promocao"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.text     "descricao"
   end
 
   create_table "sub_categorias", :force => true do |t|

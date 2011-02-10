@@ -8,7 +8,7 @@
       <div id="top"></div>
       <div id="middle">
         <ul class="menu">
-            <li>&nbsp;</li>
+            
             <% @categorias.each do |c|%>
             <li class='categoria'><%= link_to c.nome, {:controller => :produtos, :action => c.nome, :id => 1 } %><p class="legenda">(Listar todas)</p></li>
               <% @subCategorias.each do |sc|%>
