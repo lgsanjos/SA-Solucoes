@@ -11,7 +11,7 @@
 
 <% @imagems.each do |imagem| %>
   <tr>
-    <td><%=  image_tag "upload/" + imagem.caminho, :height => 50 %></td>
+    <td><%= image_tag "upload/" + imagem.caminho, :height => 50 %></td>
     <td><%=h imagem.titulo %></td>
     <td><%=h imagem.caminho %></td>
     <td><%=h imagem.produto.nome %></td>
@@ -24,5 +24,5 @@
 
 <br />
 
-<%= link_to 'New imagem', new_imagem_path %>
+<%= link_to 'Nova Imagem', new_imagem_path %>
 <%= link_to 'Voltar', :controller => :usuarios %>

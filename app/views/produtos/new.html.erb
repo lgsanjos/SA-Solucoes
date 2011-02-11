@@ -1,6 +1,6 @@
-<h1>New produto</h1>
+<h1>Novo Produto</h1>
 
-<% form_for(@produto) do |f| %>
+<% form_for(@produto, :url => {:action => "create"}) do |f| %>
   <%= f.error_messages %>
 
   <p>
@@ -16,10 +16,6 @@
     <%= f.text_area :descricao %>
   </p>
   <p>
-    <%= f.label :linkFabricante %><br />
-    <%= f.text_field :linkFabricante %>
-  </p>
-  <p>
     <%= f.label :marca %><br />
     <%= f.text_field :marca %>
   </p>
@@ -33,19 +29,19 @@
   </p>
   <p>
     <%= f.label :categoria %><br />
-    <%= select('Produtos', 'categoria_id', Categoria.all.collect {|p| [ p.nome, p.id ] }) %>
+    <%= select('produto', 'categoria_id', Categoria.all.collect {|p| [ p.nome, p.id ] }) %>
   </p>
   <p>
     <%= f.label :sub_categoria %><br />
-    <%= select('Produtos', 'sub_categoria_id', SubCategoria.all.collect {|p| [ p.nome, p.id ] }) %>
+    <%= select('produto', 'sub_categoria_id', SubCategoria.all.collect {|p| [ p.nome, p.id ] }) %>
   </p>
   <p>
     <%= f.label :promocao %><br />
     <%= f.check_box :promocao %>
   </p>
   <p>
-    <%= f.submit 'Create' %>
+    <%= f.submit 'Cadastrar' %>
   </p>
 <% end %>
 
-<%= link_to 'voltar', :controller => :usuarios, :action => :index %>
+<%= link_to 'Voltar', :action => :ger %>

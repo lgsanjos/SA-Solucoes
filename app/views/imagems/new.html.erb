@@ -1,27 +1,27 @@
-<h1>New imagem</h1>
+<h1>Cadastrar imagem de produto</h1>
 
-<% form_for(@imagem) do |f| %>
+<% form_for(@imagem, :html=>{:multipart => true}) do |f| %>
  
 
   <p>
     <%= f.label :titulo %><br />
     <%= f.text_field :titulo %>
   </p>
-  <!--p>
+  <p>
     Imagem<br />
     <%= f.file_field :imagem %>
-  </p-->
-  <p>
+  </p>
+  <!--p>
     caminho<br />
     <%= f.text_field :caminho %>
-  </p>
+  </p-->
   <p>
     <%= f.label :produto %><br />
     <%= select('imagem', 'produto_id', Produto.all.collect{|p| [ p.nome, p.id ] }) %>
   </p>
   <p>
-    <%= f.submit 'Create' %>
+    <%= f.submit 'Cadastrar' %>
   </p>
 <% end %>
 
-<%= link_to 'Back', imagems_path %>
+<%= link_to 'Voltar', imagems_path %>

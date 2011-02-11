@@ -15,8 +15,7 @@
                 <% if (c.id == sc.categoria.id) %>
                    <%= "<li class='subCategoria'>" %>
                    <%= link_to sc.nome, {:controller => "Produtos/" + c.nome, :action => sc.nome, :id => 1 } unless sc.blank? %>
-                   <%= "</li>" %>
-                   
+                   <%= "</li>" %>                   
                 <% end %>
             <% end %>
             <li>&nbsp;</li>

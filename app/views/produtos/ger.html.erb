@@ -1,38 +1,37 @@
-<h1>Listing produtos</h1>
+<h1>Produtos</h1>
 
-<table>
+<table width="100%" border="1">
   <tr>
     <th>Nome</th>
     <th>Titulo</th>
     <th>Descricao</th>
-    <th>Linkfabricante</th>
     <th>Marca</th>
     <th>Modelo</th>
     <th>Preco</th>
     <th>Categoria</th>
     <th>Sub categoria</th>
     <th>Promocao</th>
+    <th colspan="3">Acao</th>
   </tr>
 
 <% @produtos.each do |produto| %>
   <tr>
-    <td><%=h produto.nome %></td>
-    <td><%=h produto.titulo %></td>
-    <td><%=h produto.descricao %></td>
-    <td><%=h produto.linkFabricante %></td>
-    <td><%=h produto.marca %></td>
-    <td><%=h produto.modelo %></td>
-    <td><%=h produto.preco %></td>
-    <td><%=h produto.categoria %></td>
-    <td><%=h produto.sub_categoria %></td>
-    <td><%=h produto.promocao %></td>
-    <td><%= link_to 'Show', produto %></td>
-    <td><%= link_to 'Edit', edit_produto_path(produto) %></td>
-    <td><%= link_to 'Destroy', produto, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%=h produto.nome %>&nbsp;</td>
+    <td><%=h produto.titulo %>&nbsp;</td>
+    <td><%=h produto.descricao %>&nbsp;</td>
+    <td><%=h produto.marca %>&nbsp;</td>
+    <td><%=h produto.modelo%>&nbsp;</td>
+    <td><%=h produto.preco %>&nbsp;</td>
+    <td><%= Categoria.find(produto.categoria).nome unless produto.categoria.nil? %>&nbsp;</td>
+    <td><%=h SubCategoria.find(produto.sub_categoria).nome unless produto.sub_categoria.nil? %>&nbsp;</td>
+    <td><%=h produto.promocao %>&nbsp;</td>
+    <td><%= link_to 'Mostrar', produto %></td>
+    <td><%= link_to 'Editar', edit_produto_path(produto) %></td>
+    <td><%= link_to 'Remover', produto, :confirm => 'Tem certeza?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New produto', new_produto_path %>
+<%= link_to 'Cadastrar novo produto', new_produto_path %> <%= link_to 'Voltar', :controller => :usuarios, :action => :index %>

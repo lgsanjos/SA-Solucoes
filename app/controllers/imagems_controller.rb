@@ -50,15 +50,15 @@ class ImagemsController < ApplicationController
     @imagem.caminho = params[:imagem][:caminho]
 
     respond_to do |format|
-      #if Imagem.save_file(params[:imagem]) and @imagem.save
-      if @imagem.save
-        format.html { redirect_to(@imagem, :notice => 'Imagem was successfully created.') }
-        format.xml  { render :xml => @imagem, :status => :created, :location => @imagem }
-      else
-        format.html { render :action => "new" }
-        format.xml  { render :xml => @imagem.errors, :status => :unprocessable_entity }
+        @imagem.caminho = Imagem.save_file(params[:imagem])
+        if @imagem.save
+          format.html { redirect_to(@imagem, :notice => 'Imagem was successfully created.') }
+          format.xml  { render :xml => @imagem, :status => :created, :location => @imagem }
+        else
+          format.html { render :action => "new" }
+          format.xml  { render :xml => @imagem.errors, :status => :unprocessable_entity }
+        end
       end
-    end
   end
 
   # PUT /imagems/1

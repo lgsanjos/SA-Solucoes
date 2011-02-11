@@ -18,11 +18,12 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :empresa
 
   map.connect '/produtos/new', :controller => 'produtos', :action => 'new'
-
+  map.connect '/produtos/ger', :controller => 'produtos', :action => 'ger'
   map.connect '/produtos/:pagina', :controller => 'produtos', :action => 'index'
   map.connect '/produtos/pagina/:pagina', :controller => 'produtos', :action => 'index'
   map.connect '/produtos/visualizar/:id', :controller => 'produtos', :action => 'show'
-  
+
+
   map.resources :produtos
  
   map.connect '/produtos/:categorias/:pagina', :controller => 'produtos', :action => 'index'

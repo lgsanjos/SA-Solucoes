@@ -10,9 +10,14 @@
 
 <p>
   <b>Produto:</b>
-  <%=h @imagem.produto %>
+  <%=h Produto.find(@imagem.produto).nome %>
+</p>
+
+<p>
+  <b>Imagem:</b><br />
+  <%= image_tag "upload/" + @imagem.caminho %>
 </p>
 
 
-<%= link_to 'Edit', edit_imagem_path(@imagem) %> |
-<%= link_to 'Back', imagems_path %>
+<%= link_to 'Editar', edit_imagem_path(@imagem) %> |
+<%= link_to 'Voltar', imagems_path %>

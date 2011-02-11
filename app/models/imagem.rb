@@ -3,12 +3,12 @@ class Imagem < ActiveRecord::Base
 
   def self.save_file(upload)
     name = upload['imagem'].original_filename
-    directory = "public/upload"
+    directory = "public/images/upload"
 
     path = File.join(directory, name)
     File.open(path, "wb") { |f| f.write(upload['imagem'].read) }
 
-    self.caminho = path
+    name
   end
 
 end

@@ -2,7 +2,7 @@
 
 Cadastrar:
 <ul>
-  <li><%= link_to "Produtos", :controller => :produtos, :action => :new %></li>
+  <li><%= link_to "Produtos", :controller => :produtos, :action => :ger %></li>
   <li><%= link_to "Imagens", :controller => :imagems, :action => :index %></li>
   <li><%= link_to "Categorias", :controller => :categorias, :action => :index %></li>
   <li><%= link_to "SubCategorias", :controller => :sub_categorias, :action => :index %></li>
@@ -13,7 +13,6 @@ Cadastrar:
 <table>
   <tr>
     <th>Login</th>
-    <th>Senha</th>
     <th>Level</th>
     <th>Email</th>
   </tr>
@@ -21,12 +20,11 @@ Cadastrar:
 <% @usuarios.each do |usuario| %>
   <tr>
     <td><%=h usuario.login %></td>
-    <td><%=h usuario.senha %></td>
     <td><%=h usuario.level %></td>
     <td><%=h usuario.email %></td>
-    <td><%= link_to 'Show', usuario %></td>
-    <td><%= link_to 'Edit', edit_usuario_path(usuario) %></td>
-    <td><%= link_to 'Destroy', usuario, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to 'Mostrar', usuario %></td>
+    <td><%= link_to 'Editar', edit_usuario_path(usuario) %></td>
+    <td><%= link_to 'remover', usuario, :confirm => 'Tem certeza?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>

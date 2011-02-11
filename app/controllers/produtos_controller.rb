@@ -1,6 +1,7 @@
 class ProdutosController < ApplicationController
 
   before_filter :check_permission, :except => [:index, :show]
+
   # GET /produtos
   # GET /produtos.xml
   def index
@@ -88,8 +89,9 @@ class ProdutosController < ApplicationController
   # POST /produtos.xml
   def create
     @produto = Produto.new(params[:produto])
+    @produto.save
 
-    redirect_to :action => :new
+    redirect_to :action => :ger
   end
 
   # PUT /produtos/1
@@ -118,5 +120,11 @@ class ProdutosController < ApplicationController
       format.html { redirect_to(produtos_url) }
       format.xml  { head :ok }
     end
+  end
+
+  def ger
+    @produtos = Produto.find(:all)
+
+    render :layout => false
   end
 end
