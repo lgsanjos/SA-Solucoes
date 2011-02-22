@@ -33,15 +33,13 @@
       </tbody>
     </table>
     <div class="descricao">
-      <% if File.exist? "public/produtos/_" + @produto.descricao_filename %>
         <%= render :file => "public/produtos/" + @produto.descricao_filename %>
-      <% else %>
         <% if File.exist? "public/produtos/_" + @produto.id.to_s + ".rhtml" %>
           <%= render :file => "public/produtos/_" + @produto.id.to_s + ".rhtml" %>
         <% else %>
            <%= @produto.descricao %>
         <% end %>
-      <% end %>
+      
 
     </div>
   </div>
