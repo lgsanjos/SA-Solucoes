@@ -829,3 +829,1586 @@ ActionController::RoutingError (No route matches "/images/" with {:method=>:get}
   
 
 Rendering rescues/layout (not_found)
+  [4;36;1mSQL (4.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsuariosController#login (for 127.0.0.1 at 2011-02-22 13:26:39) [GET]
+  [4;36;1mUsuario Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `usuarios`[0m
+Redirected to http://localhost:3000/usuarios
+Completed in 36ms (DB: 4) | 302 Found [http://localhost/admin]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsuariosController#index (for 127.0.0.1 at 2011-02-22 13:26:39) [GET]
+  [4;35;1mUsuario Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `usuarios`[0m
+  [4;36;1mUsuario Load (0.0ms)[0m   [0;1mSELECT * FROM `usuarios` [0m
+Rendering template within layouts/usuarios
+Rendering usuarios/index
+Completed in 92ms (View: 60, DB: 16) | 200 OK [http://localhost/usuarios]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProdutosController#ger (for 127.0.0.1 at 2011-02-22 13:26:41) [GET]
+  [4;35;1mUsuario Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `usuarios`[0m
+  [4;36;1mProduto Load (4.0ms)[0m   [0;1mSELECT * FROM `produtos` [0m
+Rendering produtos/ger
+  [4;35;1mProduto Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `produtos`[0m
+  [4;36;1mCategoria Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `categorias`[0m
+  [4;35;1mCategoria Load (0.0ms)[0m   [0mSELECT * FROM `categorias` WHERE (`categorias`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `categorias` WHERE (`categorias`.`id` = 1) [0m
+  [4;35;1mSubCategoria Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `sub_categorias`[0m
+  [4;36;1mSubCategoria Load (0.0ms)[0m   [0;1mSELECT * FROM `sub_categorias` WHERE (`sub_categorias`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `sub_categorias` WHERE (`sub_categorias`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `categorias` WHERE (`categorias`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `categorias` WHERE (`categorias`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `sub_categorias` WHERE (`sub_categorias`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `sub_categorias` WHERE (`sub_categorias`.`id` = 1) [0m
+Completed in 140ms (View: 88, DB: 12) | 200 OK [http://localhost/produtos/ger]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProdutosController#destroy (for 127.0.0.1 at 2011-02-22 13:26:46) [DELETE]
+  Parameters: {"authenticity_token"=>"XEGIhZdRPNybXxDGjtC6xtlQTBkZ4W0QV59YwJiT+zA=", "id"=>"2"}
+  [4;36;1mUsuario Columns (8.0ms)[0m   [0;1mSHOW FIELDS FROM `usuarios`[0m
+  [4;35;1mProduto Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `produtos`[0m
+  [4;36;1mProduto Load (0.0ms)[0m   [0;1mSELECT * FROM `produtos` WHERE (`produtos`.`id` = 2) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mProduto Destroy (8.0ms)[0m   [0;1mDELETE FROM `produtos` WHERE `id` = 2[0m
+  [4;35;1mSQL (4.0ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/produtos/ger
+Completed in 100ms (DB: 20) | 302 Found [http://localhost/produtos/2]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProdutosController#ger (for 127.0.0.1 at 2011-02-22 13:26:46) [GET]
+  [4;36;1mUsuario Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `usuarios`[0m
+  [4;35;1mProduto Load (0.0ms)[0m   [0mSELECT * FROM `produtos` [0m
+Rendering produtos/ger
+  [4;36;1mProduto Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `produtos`[0m
+  [4;35;1mCategoria Columns (8.0ms)[0m   [0mSHOW FIELDS FROM `categorias`[0m
+  [4;36;1mCategoria Load (4.0ms)[0m   [0;1mSELECT * FROM `categorias` WHERE (`categorias`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `categorias` WHERE (`categorias`.`id` = 1) [0m
+  [4;36;1mSubCategoria Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `sub_categorias`[0m
+  [4;35;1mSubCategoria Load (4.0ms)[0m   [0mSELECT * FROM `sub_categorias` WHERE (`sub_categorias`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `sub_categorias` WHERE (`sub_categorias`.`id` = 1) [0m
+Completed in 132ms (View: 76, DB: 24) | 200 OK [http://localhost/produtos/ger]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProdutosController#new (for 127.0.0.1 at 2011-02-22 13:26:47) [GET]
+  [4;35;1mUsuario Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `usuarios`[0m
+  [4;36;1mProduto Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `produtos`[0m
+Rendering produtos/new
+  [4;35;1mCategoria Load (0.0ms)[0m   [0mSELECT * FROM `categorias` [0m
+  [4;36;1mCategoria Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `categorias`[0m
+  [4;35;1mSubCategoria Load (0.0ms)[0m   [0mSELECT * FROM `sub_categorias` [0m
+  [4;36;1mSubCategoria Columns (8.0ms)[0m   [0;1mSHOW FIELDS FROM `sub_categorias`[0m
+Completed in 112ms (View: 72, DB: 16) | 200 OK [http://localhost/produtos/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProdutosController#create (for 127.0.0.1 at 2011-02-22 13:27:07) [POST]
+  Parameters: {"commit"=>"Cadastrar", "authenticity_token"=>"XEGIhZdRPNybXxDGjtC6xtlQTBkZ4W0QV59YwJiT+zA=", "produto"=>{"titulo"=>"tesee", "nome"=>"testee", "promocao"=>"0", "preco"=>"1000", "descricao_filename"=>#<File:/tmp/RackMultipart20110222-3864-1d2518d-0>, "modelo"=>"dfgdfg", "categoria_id"=>"1", "descricao"=>"dsfsdf sdfdsfs", "sub_categoria_id"=>"1", "marca"=>"dfgdfg"}}
+  [4;35;1mUsuario Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `usuarios`[0m
+  [4;36;1mProduto Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `produtos`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mProduto Create (4.0ms)[0m   [0;1mINSERT INTO `produtos` (`created_at`, `nome`, `titulo`, `updated_at`, `promocao`, `preco`, `linkFabricante`, `descricao_filename`, `modelo`, `descricao`, `categoria_id`, `marca`, `sub_categoria_id`) VALUES('2011-02-22 16:27:07', 'testee', 'tesee', '2011-02-22 16:27:07', 0, 1000, NULL, '404.html', 'dfgdfg', 'dsfsdf sdfdsfs', 1, 'dfgdfg', 1)[0m
+  [4;35;1mSQL (8.0ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/produtos/ger
+Completed in 52ms (DB: 20) | 302 Found [http://localhost/produtos]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProdutosController#ger (for 127.0.0.1 at 2011-02-22 13:27:07) [GET]
+  [4;36;1mUsuario Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `usuarios`[0m
+  [4;35;1mProduto Load (4.0ms)[0m   [0mSELECT * FROM `produtos` [0m
+Rendering produtos/ger
+  [4;36;1mProduto Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `produtos`[0m
+  [4;35;1mCategoria Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `categorias`[0m
+  [4;36;1mCategoria Load (0.0ms)[0m   [0;1mSELECT * FROM `categorias` WHERE (`categorias`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `categorias` WHERE (`categorias`.`id` = 1) [0m
+  [4;36;1mSubCategoria Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `sub_categorias`[0m
+  [4;35;1mSubCategoria Load (0.0ms)[0m   [0mSELECT * FROM `sub_categorias` WHERE (`sub_categorias`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `sub_categorias` WHERE (`sub_categorias`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `categorias` WHERE (`categorias`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `categorias` WHERE (`categorias`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `sub_categorias` WHERE (`sub_categorias`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `sub_categorias` WHERE (`sub_categorias`.`id` = 1) [0m
+Completed in 208ms (View: 168, DB: 16) | 200 OK [http://localhost/produtos/ger]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProdutosController#show (for 127.0.0.1 at 2011-02-22 13:27:11) [GET]
+  Parameters: {"id"=>"6"}
+  [4;35;1mProduto Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `produtos`[0m
+  [4;36;1mProduto Load (0.0ms)[0m   [0;1mSELECT * FROM `produtos` WHERE (`produtos`.`id` = 6) [0m
+Rendering template within layouts/application
+Rendering produtos/show
+  [4;35;1mImagem Load (0.0ms)[0m   [0mSELECT * FROM `imagems` WHERE (produto_id = ('6')) ORDER BY RAND() LIMIT 1[0m
+Completed in 72ms (View: 48, DB: 4) | 200 OK [http://localhost/produtos/6]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-02-22 13:27:11) [GET]
+  Parameters: {"1297288541"=>nil}
+
+ActionController::RoutingError (No route matches "/images/" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (88.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (4.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProdutosController#show (for 127.0.0.1 at 2011-02-22 13:38:50) [GET]
+  Parameters: {"id"=>"6"}
+  [4;36;1mProduto Columns (260.0ms)[0m   [0;1mSHOW FIELDS FROM `produtos`[0m
+  [4;35;1mProduto Load (48.0ms)[0m   [0mSELECT * FROM `produtos` WHERE (`produtos`.`id` = 6) [0m
+Rendering template within layouts/application
+Rendering produtos/show
+  [4;36;1mImagem Load (76.0ms)[0m   [0;1mSELECT * FROM `imagems` WHERE (produto_id = ('6')) ORDER BY RAND() LIMIT 1[0m
+Completed in 484ms (View: 40, DB: 476) | 200 OK [http://localhost/produtos/6]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-02-22 13:38:52) [GET]
+  Parameters: {"1297288541"=>nil}
+
+ActionController::RoutingError (No route matches "/images/" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (4.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsuariosController#login (for 127.0.0.1 at 2011-02-22 13:39:02) [GET]
+  [4;35;1mUsuario Columns (8.0ms)[0m   [0mSHOW FIELDS FROM `usuarios`[0m
+Redirected to http://localhost:3000/usuarios
+Completed in 52ms (DB: 12) | 302 Found [http://localhost/admin]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsuariosController#index (for 127.0.0.1 at 2011-02-22 13:39:02) [GET]
+  [4;36;1mUsuario Columns (8.0ms)[0m   [0;1mSHOW FIELDS FROM `usuarios`[0m
+  [4;35;1mUsuario Load (0.0ms)[0m   [0mSELECT * FROM `usuarios` [0m
+Rendering template within layouts/usuarios
+Rendering usuarios/index
+Completed in 36ms (View: 8, DB: 8) | 200 OK [http://localhost/usuarios]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProdutosController#show (for 127.0.0.1 at 2011-02-22 13:42:23) [GET]
+  Parameters: {"id"=>"6"}
+  [4;36;1mProduto Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `produtos`[0m
+  [4;35;1mProduto Load (0.0ms)[0m   [0mSELECT * FROM `produtos` WHERE (`produtos`.`id` = 6) [0m
+Rendering template within layouts/application
+Rendering produtos/show
+ERROR: compiling _run_erb_app47views47produtos47show46html46erb RAISED compile error
+/var/www/sasoluco/app/views/produtos/show.html.erb:47: syntax error, unexpected kENSURE, expecting $end
+Function body:           def _run_erb_app47views47produtos47show46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ;  content_for :head do ; @output_buffer.concat "\n  "
+; @output_buffer.concat(( stylesheet_link_tag "produtos" ).to_s); @output_buffer.concat "\n"
+;  end ; @output_buffer.concat "\n\n<div id=\"produtoProfile\">\n  <div id=\"content\">\n    <h1>"
+
+
+
+; @output_buffer.concat(( @produto.nome ).to_s); @output_buffer.concat "</h1>\n    <h2>"
+; @output_buffer.concat(( "#{@produto.titulo} - R$ #{@produto.preco}" ).to_s); @output_buffer.concat "</h2>\n\n    <table width=\"100%\">\n      <thead>\n        <th>\n          <td></td>\n          <td></td>\n          <td></td>\n        </th>\n      </thead>\n\n      <tbody>\n        <tr>\n          <td rowspan=\"5\" colspan=\"2\">"
+
+
+
+
+
+
+
+
+
+
+
+
+; @output_buffer.concat(( image_tag @produto.get_rand_image_path, :alt => @produto.nome ).to_s); @output_buffer.concat "</td>\n          <td valign=\"top\"><p class=\"titulo\">Nome:</p> "
+; @output_buffer.concat(( @produto.nome ).to_s); @output_buffer.concat "</td>\n        </tr>\n        <tr>\n          <td valign=\"top\"><p class=\"titulo\">Modelo:</p> "
+
+
+; @output_buffer.concat(( @produto.modelo ).to_s); @output_buffer.concat "</td>\n        </tr>\n        <tr>\n          <td valign=\"top\"><p class=\"titulo\">Pre&ccedil;o:</p> R$ "
+
+
+; @output_buffer.concat(( @produto.preco ).to_s); @output_buffer.concat "</td>\n        </tr>\n        <tr>\n          <td valign=\"top\"><p class=\"titulo\">Marca:</p> "
+
+
+; @output_buffer.concat(( @produto.marca ).to_s); @output_buffer.concat "</td>\n        </tr>\n      </tbody>\n    </table>\n    <div class=\"descricao\">\n        "
+
+
+
+
+; @output_buffer.concat(( render :file => "public/produtos/" + @produto.descricao_filename ).to_s); @output_buffer.concat "\n        "
+;  if File.exist? "public/produtos/_" + @produto.id.to_s + ".rhtml" ; @output_buffer.concat "\n          "
+; @output_buffer.concat(( render :file => "public/produtos/_" + @produto.id.to_s + ".rhtml" ).to_s); @output_buffer.concat "\n        "
+;  else ; @output_buffer.concat "\n           "
+; @output_buffer.concat(( @produto.descricao ).to_s); @output_buffer.concat "\n        "
+;  end ; @output_buffer.concat "\n      "
+;  end ; @output_buffer.concat "\n\n    </div>\n  </div>\n</div>"
+
+
+
+; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /var/www/sasoluco/app/views/produtos/show.html.erb:47:in `compile!'
+/var/lib/gems/1.8/gems/actionpack-2.3.8/lib/action_view/renderable.rb:61:in `compile'
+/var/lib/gems/1.8/gems/actionpack-2.3.8/lib/action_view/renderable.rb:28:in `render'
+/var/lib/gems/1.8/gems/actionpack-2.3.8/lib/action_view/template.rb:205:in `render_template'
+/var/lib/gems/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:265:in `render'
+/var/lib/gems/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:348:in `_render_with_layout'
+/var/lib/gems/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:262:in `render'
+/var/lib/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1250:in `render_for_file'
+/var/lib/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:942:in `render_without_benchmark'
+/var/lib/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:51:in `render'
+/var/lib/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/var/lib/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/var/lib/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:51:in `render'
+/var/lib/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:135:in `send'
+/var/lib/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:135
+/var/lib/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:179:in `call'
+/var/lib/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:179:in `respond'
+/var/lib/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:173:in `each'
+/var/lib/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:173:in `respond'
+/var/lib/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:107:in `respond_to'
+/var/www/sasoluco/app/controllers/produtos_controller.rb:68:in `show'
+/var/lib/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1331:in `send'
+/var/lib/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1331:in `perform_action_without_filters'
+/var/lib/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:617:in `call_filters'
+/var/lib/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/var/lib/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/var/lib/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/var/lib/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/var/lib/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/var/lib/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/var/lib/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/flash.rb:151:in `perform_action'
+/var/lib/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:532:in `send'
+/var/lib/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:532:in `process_without_filters'
+/var/lib/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:606:in `process'
+/var/lib/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:391:in `process'
+/var/lib/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:386:in `call'
+/var/lib/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/routing/route_set.rb:438:in `call'
+/var/lib/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:87:in `dispatch'
+/var/lib/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:121:in `_call'
+/var/lib/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:130
+/var/lib/gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:29:in `call'
+/var/lib/gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:29:in `call'
+/var/lib/gems/1.8/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/var/lib/gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:9:in `cache'
+/var/lib/gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:28:in `call'
+/var/lib/gems/1.8/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/var/lib/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/string_coercion.rb:25:in `call'
+/var/lib/gems/1.8/gems/rack-1.1.0/lib/rack/head.rb:9:in `call'
+/var/lib/gems/1.8/gems/rack-1.1.0/lib/rack/methodoverride.rb:24:in `call'
+/var/lib/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/params_parser.rb:15:in `call'
+/var/lib/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/session/cookie_store.rb:99:in `call'
+/var/lib/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/failsafe.rb:26:in `call'
+/var/lib/gems/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `call'
+/var/lib/gems/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `synchronize'
+/var/lib/gems/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `call'
+/var/lib/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:114:in `call'
+/var/lib/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/reloader.rb:34:in `run'
+/var/lib/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:108:in `call'
+/home/sanjos/.gem/ruby/1.8/gems/rails-2.3.8/lib/rails/rack/static.rb:31:in `call'
+/var/lib/gems/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:47:in `call'
+/var/lib/gems/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:41:in `each'
+/var/lib/gems/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:41:in `call'
+/home/sanjos/.gem/ruby/1.8/gems/rails-2.3.8/lib/rails/rack/log_tailer.rb:17:in `call'
+/var/lib/gems/1.8/gems/rack-1.1.0/lib/rack/content_length.rb:13:in `call'
+/var/lib/gems/1.8/gems/rack-1.1.0/lib/rack/chunked.rb:15:in `call'
+/var/lib/gems/1.8/gems/rack-1.1.0/lib/rack/handler/mongrel.rb:67:in `process'
+/var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+/var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+/var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+/var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+/var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+/var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+/var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+/var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+/var/lib/gems/1.8/gems/rack-1.1.0/lib/rack/handler/mongrel.rb:38:in `run'
+/home/sanjos/.gem/ruby/1.8/gems/rails-2.3.8/lib/commands/server.rb:111
+/usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+/var/www/sasoluco/app/views/produtos/show.html.erb:47: syntax error, unexpected kENSURE, expecting $end) on line #47 of app/views/produtos/show.html.erb:
+44:     </div>
+45:   </div>
+46: </div>
+
+    app/views/produtos/show.html.erb:47:in `compile!'
+    app/controllers/produtos_controller.rb:68:in `show'
+
+Rendered rescues/_trace (84.0ms)
+Rendered rescues/_request_and_response (48.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (4.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProdutosController#show (for 127.0.0.1 at 2011-02-22 13:42:24) [GET]
+  Parameters: {"id"=>"6"}
+  [4;36;1mProduto Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `produtos`[0m
+  [4;35;1mProduto Load (0.0ms)[0m   [0mSELECT * FROM `produtos` WHERE (`produtos`.`id` = 6) [0m
+Rendering template within layouts/application
+Rendering produtos/show
+ERROR: compiling _run_erb_app47views47produtos47show46html46erb RAISED compile error
+/var/www/sasoluco/app/views/produtos/show.html.erb:47: syntax error, unexpected kENSURE, expecting $end
+Function body:           def _run_erb_app47views47produtos47show46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ;  content_for :head do ; @output_buffer.concat "\n  "
+; @output_buffer.concat(( stylesheet_link_tag "produtos" ).to_s); @output_buffer.concat "\n"
+;  end ; @output_buffer.concat "\n\n<div id=\"produtoProfile\">\n  <div id=\"content\">\n    <h1>"
+
+
+
+; @output_buffer.concat(( @produto.nome ).to_s); @output_buffer.concat "</h1>\n    <h2>"
+; @output_buffer.concat(( "#{@produto.titulo} - R$ #{@produto.preco}" ).to_s); @output_buffer.concat "</h2>\n\n    <table width=\"100%\">\n      <thead>\n        <th>\n          <td></td>\n          <td></td>\n          <td></td>\n        </th>\n      </thead>\n\n      <tbody>\n        <tr>\n          <td rowspan=\"5\" colspan=\"2\">"
+
+
+
+
+
+
+
+
+
+
+
+
+; @output_buffer.concat(( image_tag @produto.get_rand_image_path, :alt => @produto.nome ).to_s); @output_buffer.concat "</td>\n          <td valign=\"top\"><p class=\"titulo\">Nome:</p> "
+; @output_buffer.concat(( @produto.nome ).to_s); @output_buffer.concat "</td>\n        </tr>\n        <tr>\n          <td valign=\"top\"><p class=\"titulo\">Modelo:</p> "
+
+
+; @output_buffer.concat(( @produto.modelo ).to_s); @output_buffer.concat "</td>\n        </tr>\n        <tr>\n          <td valign=\"top\"><p class=\"titulo\">Pre&ccedil;o:</p> R$ "
+
+
+; @output_buffer.concat(( @produto.preco ).to_s); @output_buffer.concat "</td>\n        </tr>\n        <tr>\n          <td valign=\"top\"><p class=\"titulo\">Marca:</p> "
+
+
+; @output_buffer.concat(( @produto.marca ).to_s); @output_buffer.concat "</td>\n        </tr>\n      </tbody>\n    </table>\n    <div class=\"descricao\">\n        "
+
+
+
+
+; @output_buffer.concat(( render :file => "public/produtos/" + @produto.descricao_filename ).to_s); @output_buffer.concat "\n        "
+;  if File.exist? "public/produtos/_" + @produto.id.to_s + ".rhtml" ; @output_buffer.concat "\n          "
+; @output_buffer.concat(( render :file => "public/produtos/_" + @produto.id.to_s + ".rhtml" ).to_s); @output_buffer.concat "\n        "
+;  else ; @output_buffer.concat "\n           "
+; @output_buffer.concat(( @produto.descricao ).to_s); @output_buffer.concat "\n        "
+;  end ; @output_buffer.concat "\n      "
+;  end ; @output_buffer.concat "\n\n    </div>\n  </div>\n</div>"
+
+
+
+; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /var/www/sasoluco/app/views/produtos/show.html.erb:47:in `compile!'
+/var/lib/gems/1.8/gems/actionpack-2.3.8/lib/action_view/renderable.rb:61:in `compile'
+/var/lib/gems/1.8/gems/actionpack-2.3.8/lib/action_view/renderable.rb:28:in `render'
+/var/lib/gems/1.8/gems/actionpack-2.3.8/lib/action_view/template.rb:205:in `render_template'
+/var/lib/gems/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:265:in `render'
+/var/lib/gems/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:348:in `_render_with_layout'
+/var/lib/gems/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:262:in `render'
+/var/lib/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1250:in `render_for_file'
+/var/lib/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:942:in `render_without_benchmark'
+/var/lib/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:51:in `render'
+/var/lib/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/var/lib/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/var/lib/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:51:in `render'
+/var/lib/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:135:in `send'
+/var/lib/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:135
+/var/lib/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:179:in `call'
+/var/lib/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:179:in `respond'
+/var/lib/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:173:in `each'
+/var/lib/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:173:in `respond'
+/var/lib/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:107:in `respond_to'
+/var/www/sasoluco/app/controllers/produtos_controller.rb:68:in `show'
+/var/lib/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1331:in `send'
+/var/lib/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1331:in `perform_action_without_filters'
+/var/lib/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:617:in `call_filters'
+/var/lib/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/var/lib/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/var/lib/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/var/lib/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/var/lib/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/var/lib/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/var/lib/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/flash.rb:151:in `perform_action'
+/var/lib/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:532:in `send'
+/var/lib/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:532:in `process_without_filters'
+/var/lib/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:606:in `process'
+/var/lib/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:391:in `process'
+/var/lib/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:386:in `call'
+/var/lib/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/routing/route_set.rb:438:in `call'
+/var/lib/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:87:in `dispatch'
+/var/lib/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:121:in `_call'
+/var/lib/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:130
+/var/lib/gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:29:in `call'
+/var/lib/gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:29:in `call'
+/var/lib/gems/1.8/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/var/lib/gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:9:in `cache'
+/var/lib/gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:28:in `call'
+/var/lib/gems/1.8/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/var/lib/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/string_coercion.rb:25:in `call'
+/var/lib/gems/1.8/gems/rack-1.1.0/lib/rack/head.rb:9:in `call'
+/var/lib/gems/1.8/gems/rack-1.1.0/lib/rack/methodoverride.rb:24:in `call'
+/var/lib/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/params_parser.rb:15:in `call'
+/var/lib/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/session/cookie_store.rb:99:in `call'
+/var/lib/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/failsafe.rb:26:in `call'
+/var/lib/gems/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `call'
+/var/lib/gems/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `synchronize'
+/var/lib/gems/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `call'
+/var/lib/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:114:in `call'
+/var/lib/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/reloader.rb:34:in `run'
+/var/lib/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:108:in `call'
+/home/sanjos/.gem/ruby/1.8/gems/rails-2.3.8/lib/rails/rack/static.rb:31:in `call'
+/var/lib/gems/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:47:in `call'
+/var/lib/gems/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:41:in `each'
+/var/lib/gems/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:41:in `call'
+/home/sanjos/.gem/ruby/1.8/gems/rails-2.3.8/lib/rails/rack/log_tailer.rb:17:in `call'
+/var/lib/gems/1.8/gems/rack-1.1.0/lib/rack/content_length.rb:13:in `call'
+/var/lib/gems/1.8/gems/rack-1.1.0/lib/rack/chunked.rb:15:in `call'
+/var/lib/gems/1.8/gems/rack-1.1.0/lib/rack/handler/mongrel.rb:67:in `process'
+/var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+/var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+/var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+/var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+/var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+/var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+/var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+/var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+/var/lib/gems/1.8/gems/rack-1.1.0/lib/rack/handler/mongrel.rb:38:in `run'
+/home/sanjos/.gem/ruby/1.8/gems/rails-2.3.8/lib/commands/server.rb:111
+/usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+/var/www/sasoluco/app/views/produtos/show.html.erb:47: syntax error, unexpected kENSURE, expecting $end) on line #47 of app/views/produtos/show.html.erb:
+44:     </div>
+45:   </div>
+46: </div>
+
+    app/views/produtos/show.html.erb:47:in `compile!'
+    app/controllers/produtos_controller.rb:68:in `show'
+
+Rendered rescues/_trace (364.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProdutosController#show (for 127.0.0.1 at 2011-02-22 13:42:34) [GET]
+  Parameters: {"id"=>"6"}
+  [4;36;1mProduto Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `produtos`[0m
+  [4;35;1mProduto Load (0.0ms)[0m   [0mSELECT * FROM `produtos` WHERE (`produtos`.`id` = 6) [0m
+Rendering template within layouts/application
+Rendering produtos/show
+  [4;36;1mImagem Load (0.0ms)[0m   [0;1mSELECT * FROM `imagems` WHERE (produto_id = ('6')) ORDER BY RAND() LIMIT 1[0m
+Completed in 52ms (View: 36, DB: 4) | 200 OK [http://localhost/produtos/6]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-02-22 13:42:35) [GET]
+  Parameters: {"1297288541"=>nil}
+
+ActionController::RoutingError (No route matches "/images/" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsuariosController#index (for 127.0.0.1 at 2011-02-22 13:55:13) [GET]
+  [4;36;1mUsuario Columns (8.0ms)[0m   [0;1mSHOW FIELDS FROM `usuarios`[0m
+  [4;35;1mUsuario Load (4.0ms)[0m   [0mSELECT * FROM `usuarios` [0m
+Rendering template within layouts/usuarios
+Rendering usuarios/index
+Completed in 88ms (View: 52, DB: 12) | 200 OK [http://localhost/usuarios]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ImagemsController#index (for 127.0.0.1 at 2011-02-22 13:55:16) [GET]
+  [4;36;1mImagem Load (20.0ms)[0m   [0;1mSELECT * FROM `imagems` [0m
+Rendering template within layouts/imagems
+Rendering imagems/index
+  [4;35;1mImagem Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `imagems`[0m
+  [4;36;1mProduto Columns (8.0ms)[0m   [0;1mSHOW FIELDS FROM `produtos`[0m
+  [4;35;1mProduto Load (8.0ms)[0m   [0mSELECT * FROM `produtos` WHERE (`produtos`.`id` = 1) [0m
+Completed in 188ms (View: 132, DB: 40) | 200 OK [http://localhost/imagems]
+  [4;36;1mUsuario Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `usuarios`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ImagemsController#new (for 127.0.0.1 at 2011-02-22 13:55:19) [GET]
+  [4;35;1mUsuario Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `usuarios`[0m
+  [4;36;1mImagem Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `imagems`[0m
+Rendering template within layouts/imagems
+Rendering imagems/new
+  [4;35;1mProduto Load (4.0ms)[0m   [0mSELECT * FROM `produtos` [0m
+  [4;36;1mProduto Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `produtos`[0m
+Completed in 132ms (View: 72, DB: 12) | 200 OK [http://localhost/imagems/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ImagemsController#create (for 127.0.0.1 at 2011-02-22 13:55:37) [POST]
+  Parameters: {"imagem"=>{"imagem"=>#<File:/tmp/RackMultipart20110222-4054-1eb6l0b-0>, "produto_id"=>"6", "titulo"=>"fundoo"}, "commit"=>"Cadastrar", "authenticity_token"=>"XEGIhZdRPNybXxDGjtC6xtlQTBkZ4W0QV59YwJiT+zA="}
+  [4;35;1mUsuario Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `usuarios`[0m
+  [4;36;1mImagem Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `imagems`[0m
+  [4;35;1mProduto Columns (24.0ms)[0m   [0mSHOW FIELDS FROM `produtos`[0m
+  [4;36;1mProduto Load (0.0ms)[0m   [0;1mSELECT * FROM `produtos` WHERE (`produtos`.`id` = 6) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mImagem Create (24.0ms)[0m   [0;1mINSERT INTO `imagems` (`produto_id`, `created_at`, `titulo`, `updated_at`, `caminho`) VALUES(6, '2011-02-22 16:55:37', 'fundoo', '2011-02-22 16:55:37', 'background.jpg')[0m
+  [4;35;1mSQL (20.0ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/imagems/5
+Completed in 152ms (DB: 76) | 302 Found [http://localhost/imagems]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (4.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ImagemsController#show (for 127.0.0.1 at 2011-02-22 13:55:37) [GET]
+  Parameters: {"id"=>"5"}
+  [4;36;1mImagem Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `imagems`[0m
+  [4;35;1mImagem Load (0.0ms)[0m   [0mSELECT * FROM `imagems` WHERE (`imagems`.`id` = 5) [0m
+Rendering template within layouts/imagems
+Rendering imagems/show
+  [4;36;1mProduto Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `produtos`[0m
+  [4;35;1mProduto Load (4.0ms)[0m   [0mSELECT * FROM `produtos` WHERE (`produtos`.`id` = 6) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `produtos` WHERE (`produtos`.`id` = 6) [0m
+Completed in 72ms (View: 52, DB: 8) | 200 OK [http://localhost/imagems/5]
+  [4;35;1mUsuario Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `usuarios`[0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ImagemsController#edit (for 127.0.0.1 at 2011-02-22 13:55:41) [GET]
+  Parameters: {"id"=>"5"}
+  [4;36;1mUsuario Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `usuarios`[0m
+  [4;35;1mImagem Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `imagems`[0m
+  [4;36;1mImagem Load (0.0ms)[0m   [0;1mSELECT * FROM `imagems` WHERE (`imagems`.`id` = 5) [0m
+Rendering template within layouts/imagems
+Rendering imagems/edit
+  [4;35;1mProduto Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `produtos`[0m
+  [4;36;1mProduto Load (0.0ms)[0m   [0;1mSELECT * FROM `produtos` WHERE (`produtos`.`id` = 6) [0m
+Completed in 96ms (View: 72, DB: 12) | 200 OK [http://localhost/imagems/5/edit]
+  [4;35;1mSQL (4.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ImagemsController#index (for 127.0.0.1 at 2011-02-22 13:55:44) [GET]
+  [4;35;1mImagem Load (0.0ms)[0m   [0mSELECT * FROM `imagems` [0m
+Rendering template within layouts/imagems
+Rendering imagems/index
+  [4;36;1mImagem Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `imagems`[0m
+  [4;35;1mProduto Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `produtos`[0m
+  [4;36;1mProduto Load (0.0ms)[0m   [0;1mSELECT * FROM `produtos` WHERE (`produtos`.`id` = 1) [0m
+  [4;35;1mProduto Load (4.0ms)[0m   [0mSELECT * FROM `produtos` WHERE (`produtos`.`id` = 6) [0m
+Completed in 64ms (View: 40, DB: 16) | 200 OK [http://localhost/imagems]
+  [4;36;1mUsuario Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `usuarios`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsuariosController#index (for 127.0.0.1 at 2011-02-22 13:57:53) [GET]
+  [4;35;1mUsuario Columns (8.0ms)[0m   [0mSHOW FIELDS FROM `usuarios`[0m
+  [4;36;1mUsuario Load (0.0ms)[0m   [0;1mSELECT * FROM `usuarios` [0m
+Rendering template within layouts/usuarios
+Rendering usuarios/index
+Completed in 44ms (View: 16, DB: 8) | 200 OK [http://localhost/usuarios]
+  [4;35;1mSQL (4.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProdutosController#ger (for 127.0.0.1 at 2011-02-22 13:57:55) [GET]
+  [4;35;1mUsuario Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `usuarios`[0m
+  [4;36;1mProduto Load (4.0ms)[0m   [0;1mSELECT * FROM `produtos` [0m
+Rendering produtos/ger
+  [4;35;1mProduto Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `produtos`[0m
+  [4;36;1mCategoria Columns (20.0ms)[0m   [0;1mSHOW FIELDS FROM `categorias`[0m
+  [4;35;1mCategoria Load (0.0ms)[0m   [0mSELECT * FROM `categorias` WHERE (`categorias`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `categorias` WHERE (`categorias`.`id` = 1) [0m
+  [4;35;1mSubCategoria Columns (8.0ms)[0m   [0mSHOW FIELDS FROM `sub_categorias`[0m
+  [4;36;1mSubCategoria Load (0.0ms)[0m   [0;1mSELECT * FROM `sub_categorias` WHERE (`sub_categorias`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `sub_categorias` WHERE (`sub_categorias`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `categorias` WHERE (`categorias`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `categorias` WHERE (`categorias`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `sub_categorias` WHERE (`sub_categorias`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `sub_categorias` WHERE (`sub_categorias`.`id` = 1) [0m
+Completed in 164ms (View: 100, DB: 40) | 200 OK [http://localhost/produtos/ger]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProdutosController#show (for 127.0.0.1 at 2011-02-22 13:57:56) [GET]
+  Parameters: {"id"=>"6"}
+  [4;36;1mProduto Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `produtos`[0m
+  [4;35;1mProduto Load (4.0ms)[0m   [0mSELECT * FROM `produtos` WHERE (`produtos`.`id` = 6) [0m
+Rendering template within layouts/application
+Rendering produtos/show
+  [4;36;1mImagem Load (8.0ms)[0m   [0;1mSELECT * FROM `imagems` WHERE (produto_id = ('6')) ORDER BY RAND() LIMIT 1[0m
+  [4;35;1mImagem Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `imagems`[0m
+Completed in 76ms (View: 48, DB: 16) | 200 OK [http://localhost/produtos/6]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2011-02-22 13:57:59) [GET]
+  [4;36;1mProduto Load (4.0ms)[0m   [0;1mSELECT * FROM `produtos` WHERE (`produtos`.`promocao` = 1) ORDER BY Rand() LIMIT 9[0m
+Rendering template within layouts/application
+Rendering home/index
+Completed in 60ms (View: 36, DB: 4) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsuariosController#login (for 127.0.0.1 at 2011-02-22 13:58:48) [GET]
+  [4;35;1mUsuario Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `usuarios`[0m
+Redirected to http://localhost:3000/usuarios
+Completed in 20ms (DB: 4) | 302 Found [http://localhost/admin]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsuariosController#index (for 127.0.0.1 at 2011-02-22 13:58:48) [GET]
+  [4;36;1mUsuario Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `usuarios`[0m
+  [4;35;1mUsuario Load (0.0ms)[0m   [0mSELECT * FROM `usuarios` [0m
+Rendering template within layouts/usuarios
+Rendering usuarios/index
+Completed in 28ms (View: 12, DB: 0) | 200 OK [http://localhost/usuarios]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProdutosController#ger (for 127.0.0.1 at 2011-02-22 13:58:49) [GET]
+  [4;36;1mUsuario Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `usuarios`[0m
+  [4;35;1mProduto Load (0.0ms)[0m   [0mSELECT * FROM `produtos` [0m
+Rendering produtos/ger
+  [4;36;1mProduto Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `produtos`[0m
+  [4;35;1mCategoria Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `categorias`[0m
+  [4;36;1mCategoria Load (0.0ms)[0m   [0;1mSELECT * FROM `categorias` WHERE (`categorias`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `categorias` WHERE (`categorias`.`id` = 1) [0m
+  [4;36;1mSubCategoria Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `sub_categorias`[0m
+  [4;35;1mSubCategoria Load (0.0ms)[0m   [0mSELECT * FROM `sub_categorias` WHERE (`sub_categorias`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `sub_categorias` WHERE (`sub_categorias`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `categorias` WHERE (`categorias`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `categorias` WHERE (`categorias`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `sub_categorias` WHERE (`sub_categorias`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `sub_categorias` WHERE (`sub_categorias`.`id` = 1) [0m
+Completed in 84ms (View: 44, DB: 12) | 200 OK [http://localhost/produtos/ger]
+  [4;35;1mSQL (4.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProdutosController#show (for 127.0.0.1 at 2011-02-22 13:58:51) [GET]
+  Parameters: {"id"=>"6"}
+  [4;35;1mProduto Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `produtos`[0m
+  [4;36;1mProduto Load (0.0ms)[0m   [0;1mSELECT * FROM `produtos` WHERE (`produtos`.`id` = 6) [0m
+Rendering template within layouts/application
+Rendering produtos/show
+  [4;35;1mImagem Load (0.0ms)[0m   [0mSELECT * FROM `imagems` WHERE (produto_id = ('6')) ORDER BY RAND() LIMIT 1[0m
+  [4;36;1mImagem Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `imagems`[0m
+Completed in 44ms (View: 20, DB: 8) | 200 OK [http://localhost/produtos/6]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProdutosController#edit (for 127.0.0.1 at 2011-02-22 13:58:56) [GET]
+  Parameters: {"id"=>"6"}
+  [4;35;1mUsuario Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `usuarios`[0m
+  [4;36;1mProduto Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `produtos`[0m
+  [4;35;1mProduto Load (0.0ms)[0m   [0mSELECT * FROM `produtos` WHERE (`produtos`.`id` = 6) [0m
+Rendering produtos/edit
+  [4;36;1mCategoria Columns (8.0ms)[0m   [0;1mSHOW FIELDS FROM `categorias`[0m
+  [4;35;1mCategoria Load (0.0ms)[0m   [0mSELECT * FROM `categorias` WHERE (`categorias`.`id` = 1) [0m
+  [4;36;1mSubCategoria Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `sub_categorias`[0m
+  [4;35;1mSubCategoria Load (8.0ms)[0m   [0mSELECT * FROM `sub_categorias` WHERE (`sub_categorias`.`id` = 1) [0m
+Completed in 288ms (View: 232, DB: 24) | 200 OK [http://localhost/produtos/6/edit]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProdutosController#update (for 127.0.0.1 at 2011-02-22 13:58:59) [PUT]
+  Parameters: {"commit"=>"Update", "authenticity_token"=>"XEGIhZdRPNybXxDGjtC6xtlQTBkZ4W0QV59YwJiT+zA=", "id"=>"6", "produto"=>{"categoria"=>"#<Categoria:0xb679c488>", "sub_categoria"=>"#<SubCategoria:0xb6790d04>", "titulo"=>"tesee", "nome"=>"testee", "promocao"=>"1", "preco"=>"1000", "linkFabricante"=>"", "modelo"=>"dfgdfg", "descricao"=>"dsfsdf sdfdsfs", "marca"=>"dfgdfg"}}
+  [4;36;1mUsuario Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `usuarios`[0m
+  [4;35;1mProduto Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `produtos`[0m
+  [4;36;1mProduto Load (0.0ms)[0m   [0;1mSELECT * FROM `produtos` WHERE (`produtos`.`id` = 6) [0m
+
+ActiveRecord::AssociationTypeMismatch (Categoria(#-617042908) expected, got String(#-608284158)):
+  app/controllers/produtos_controller.rb:104
+  app/controllers/produtos_controller.rb:103:in `update'
+
+Rendered rescues/_trace (72.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsuariosController#index (for 127.0.0.1 at 2011-02-22 13:59:03) [GET]
+  [4;35;1mUsuario Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `usuarios`[0m
+  [4;36;1mUsuario Load (0.0ms)[0m   [0;1mSELECT * FROM `usuarios` [0m
+Rendering template within layouts/usuarios
+Rendering usuarios/index
+Completed in 32ms (View: 12, DB: 4) | 200 OK [http://localhost/usuarios]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProdutosController#ger (for 127.0.0.1 at 2011-02-22 13:59:05) [GET]
+  [4;35;1mUsuario Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `usuarios`[0m
+  [4;36;1mProduto Load (4.0ms)[0m   [0;1mSELECT * FROM `produtos` [0m
+Rendering produtos/ger
+  [4;35;1mProduto Columns (8.0ms)[0m   [0mSHOW FIELDS FROM `produtos`[0m
+  [4;36;1mCategoria Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `categorias`[0m
+  [4;35;1mCategoria Load (0.0ms)[0m   [0mSELECT * FROM `categorias` WHERE (`categorias`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `categorias` WHERE (`categorias`.`id` = 1) [0m
+  [4;35;1mSubCategoria Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `sub_categorias`[0m
+  [4;36;1mSubCategoria Load (0.0ms)[0m   [0;1mSELECT * FROM `sub_categorias` WHERE (`sub_categorias`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `sub_categorias` WHERE (`sub_categorias`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `categorias` WHERE (`categorias`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `categorias` WHERE (`categorias`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `sub_categorias` WHERE (`sub_categorias`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `sub_categorias` WHERE (`sub_categorias`.`id` = 1) [0m
+Completed in 212ms (View: 164, DB: 36) | 200 OK [http://localhost/produtos/ger]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProdutosController#ger (for 127.0.0.1 at 2011-02-22 14:00:42) [GET]
+  [4;36;1mUsuario Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `usuarios`[0m
+  [4;35;1mProduto Load (0.0ms)[0m   [0mSELECT * FROM `produtos` [0m
+Rendering produtos/ger
+  [4;36;1mProduto Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `produtos`[0m
+  [4;35;1mCategoria Columns (8.0ms)[0m   [0mSHOW FIELDS FROM `categorias`[0m
+  [4;36;1mCategoria Load (0.0ms)[0m   [0;1mSELECT * FROM `categorias` WHERE (`categorias`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `categorias` WHERE (`categorias`.`id` = 1) [0m
+  [4;36;1mSubCategoria Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `sub_categorias`[0m
+  [4;35;1mSubCategoria Load (4.0ms)[0m   [0mSELECT * FROM `sub_categorias` WHERE (`sub_categorias`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `sub_categorias` WHERE (`sub_categorias`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `categorias` WHERE (`categorias`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `categorias` WHERE (`categorias`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `sub_categorias` WHERE (`sub_categorias`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `sub_categorias` WHERE (`sub_categorias`.`id` = 1) [0m
+Completed in 116ms (View: 56, DB: 16) | 200 OK [http://localhost/produtos/ger]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProdutosController#edit (for 127.0.0.1 at 2011-02-22 14:00:44) [GET]
+  Parameters: {"id"=>"6"}
+  [4;35;1mUsuario Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `usuarios`[0m
+  [4;36;1mProduto Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `produtos`[0m
+  [4;35;1mProduto Load (4.0ms)[0m   [0mSELECT * FROM `produtos` WHERE (`produtos`.`id` = 6) [0m
+Rendering produtos/edit
+  [4;36;1mCategoria Load (4.0ms)[0m   [0;1mSELECT * FROM `categorias` [0m
+  [4;35;1mCategoria Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `categorias`[0m
+  [4;36;1mCategoria Load (0.0ms)[0m   [0;1mSELECT * FROM `categorias` WHERE (`categorias`.`id` = 1) [0m
+  [4;35;1mSubCategoria Load (0.0ms)[0m   [0mSELECT * FROM `sub_categorias` [0m
+  [4;36;1mSubCategoria Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `sub_categorias`[0m
+Completed in 116ms (View: 80, DB: 12) | 200 OK [http://localhost/produtos/6/edit]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProdutosController#update (for 127.0.0.1 at 2011-02-22 14:01:20) [PUT]
+  Parameters: {"commit"=>"Update", "authenticity_token"=>"XEGIhZdRPNybXxDGjtC6xtlQTBkZ4W0QV59YwJiT+zA=", "id"=>"6", "produto"=>{"titulo"=>"tesee", "nome"=>"testee", "promocao"=>"1", "preco"=>"1000", "linkFabricante"=>"", "modelo"=>"dfgdfg", "categoria_id"=>"1", "descricao"=>"dsfsdf sdfdsfs", "sub_categoria_id"=>"1", "marca"=>"dfgdfg"}}
+  [4;35;1mUsuario Columns (8.0ms)[0m   [0mSHOW FIELDS FROM `usuarios`[0m
+  [4;36;1mProduto Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `produtos`[0m
+  [4;35;1mProduto Load (0.0ms)[0m   [0mSELECT * FROM `produtos` WHERE (`produtos`.`id` = 6) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mProduto Update (104.0ms)[0m   [0mUPDATE `produtos` SET `updated_at` = '2011-02-22 17:01:20', `linkFabricante` = '', `promocao` = 1 WHERE `id` = 6[0m
+  [4;36;1mSQL (16.0ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/produtos/6
+Completed in 172ms (DB: 132) | 302 Found [http://localhost/produtos/6]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProdutosController#show (for 127.0.0.1 at 2011-02-22 14:01:20) [GET]
+  Parameters: {"id"=>"6"}
+  [4;35;1mProduto Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `produtos`[0m
+  [4;36;1mProduto Load (4.0ms)[0m   [0;1mSELECT * FROM `produtos` WHERE (`produtos`.`id` = 6) [0m
+Rendering template within layouts/application
+Rendering produtos/show
+  [4;35;1mImagem Load (0.0ms)[0m   [0mSELECT * FROM `imagems` WHERE (produto_id = ('6')) ORDER BY RAND() LIMIT 1[0m
+  [4;36;1mImagem Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `imagems`[0m
+Completed in 176ms (View: 24, DB: 12) | 200 OK [http://localhost/produtos/6]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2011-02-22 14:01:23) [GET]
+  [4;35;1mProduto Load (4.0ms)[0m   [0mSELECT * FROM `produtos` WHERE (`produtos`.`promocao` = 1) ORDER BY Rand() LIMIT 9[0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;36;1mProduto Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `produtos`[0m
+  [4;35;1mImagem Load (0.0ms)[0m   [0mSELECT * FROM `imagems` WHERE (produto_id = ('6')) ORDER BY RAND() LIMIT 1[0m
+  [4;36;1mImagem Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `imagems`[0m
+Completed in 52ms (View: 28, DB: 8) | 200 OK [http://localhost/]
+  [4;35;1mSQL (4.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2011-02-22 14:01:44) [GET]
+  [4;35;1mProduto Load (8.0ms)[0m   [0mSELECT * FROM `produtos` WHERE (`produtos`.`promocao` = 1) ORDER BY Rand() LIMIT 9[0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;36;1mProduto Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `produtos`[0m
+  [4;35;1mImagem Load (4.0ms)[0m   [0mSELECT * FROM `imagems` WHERE (produto_id = ('6')) ORDER BY RAND() LIMIT 1[0m
+  [4;36;1mImagem Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `imagems`[0m
+Completed in 48ms (View: 12, DB: 20) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2011-02-22 14:01:47) [GET]
+  [4;35;1mProduto Load (4.0ms)[0m   [0mSELECT * FROM `produtos` WHERE (`produtos`.`promocao` = 1) ORDER BY Rand() LIMIT 9[0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;36;1mProduto Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `produtos`[0m
+  [4;35;1mImagem Load (0.0ms)[0m   [0mSELECT * FROM `imagems` WHERE (produto_id = ('6')) ORDER BY RAND() LIMIT 1[0m
+  [4;36;1mImagem Columns (8.0ms)[0m   [0;1mSHOW FIELDS FROM `imagems`[0m
+Completed in 52ms (View: 20, DB: 16) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2011-02-22 14:01:48) [GET]
+  [4;35;1mProduto Load (4.0ms)[0m   [0mSELECT * FROM `produtos` WHERE (`produtos`.`promocao` = 1) ORDER BY Rand() LIMIT 9[0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;36;1mProduto Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `produtos`[0m
+  [4;35;1mImagem Load (0.0ms)[0m   [0mSELECT * FROM `imagems` WHERE (produto_id = ('6')) ORDER BY RAND() LIMIT 1[0m
+  [4;36;1mImagem Columns (8.0ms)[0m   [0;1mSHOW FIELDS FROM `imagems`[0m
+Completed in 432ms (View: 48, DB: 28) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2011-02-22 14:01:51) [GET]
+  [4;35;1mProduto Load (16.0ms)[0m   [0mSELECT * FROM `produtos` WHERE (`produtos`.`promocao` = 1) ORDER BY Rand() LIMIT 9[0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;36;1mProduto Columns (8.0ms)[0m   [0;1mSHOW FIELDS FROM `produtos`[0m
+  [4;35;1mImagem Load (4.0ms)[0m   [0mSELECT * FROM `imagems` WHERE (produto_id = ('6')) ORDER BY RAND() LIMIT 1[0m
+  [4;36;1mImagem Columns (8.0ms)[0m   [0;1mSHOW FIELDS FROM `imagems`[0m
+Completed in 64ms (View: 12, DB: 36) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2011-02-22 14:02:01) [GET]
+  [4;35;1mProduto Load (12.0ms)[0m   [0mSELECT * FROM `produtos` WHERE (`produtos`.`promocao` = 1) ORDER BY Rand() LIMIT 9[0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;36;1mProduto Columns (12.0ms)[0m   [0;1mSHOW FIELDS FROM `produtos`[0m
+  [4;35;1mImagem Load (0.0ms)[0m   [0mSELECT * FROM `imagems` WHERE (produto_id = ('6')) ORDER BY RAND() LIMIT 1[0m
+  [4;36;1mImagem Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `imagems`[0m
+Completed in 56ms (View: 16, DB: 28) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2011-02-22 14:02:04) [GET]
+  [4;35;1mProduto Load (4.0ms)[0m   [0mSELECT * FROM `produtos` WHERE (`produtos`.`promocao` = 1) ORDER BY Rand() LIMIT 9[0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;36;1mProduto Columns (8.0ms)[0m   [0;1mSHOW FIELDS FROM `produtos`[0m
+  [4;35;1mImagem Load (0.0ms)[0m   [0mSELECT * FROM `imagems` WHERE (produto_id = ('6')) ORDER BY RAND() LIMIT 1[0m
+  [4;36;1mImagem Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `imagems`[0m
+Completed in 48ms (View: 24, DB: 12) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2011-02-22 14:02:49) [GET]
+  [4;35;1mProduto Load (8.0ms)[0m   [0mSELECT * FROM `produtos` WHERE (`produtos`.`promocao` = 1) ORDER BY Rand() LIMIT 9[0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;36;1mProduto Columns (8.0ms)[0m   [0;1mSHOW FIELDS FROM `produtos`[0m
+  [4;35;1mImagem Load (0.0ms)[0m   [0mSELECT * FROM `imagems` WHERE (produto_id = ('6')) ORDER BY RAND() LIMIT 1[0m
+  [4;36;1mImagem Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `imagems`[0m
+Completed in 56ms (View: 24, DB: 16) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2011-02-22 14:02:52) [GET]
+  [4;35;1mProduto Load (4.0ms)[0m   [0mSELECT * FROM `produtos` WHERE (`produtos`.`promocao` = 1) ORDER BY Rand() LIMIT 9[0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;36;1mProduto Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `produtos`[0m
+  [4;35;1mImagem Load (0.0ms)[0m   [0mSELECT * FROM `imagems` WHERE (produto_id = ('6')) ORDER BY RAND() LIMIT 1[0m
+  [4;36;1mImagem Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `imagems`[0m
+Completed in 52ms (View: 32, DB: 4) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2011-02-22 14:03:46) [GET]
+  [4;35;1mProduto Load (4.0ms)[0m   [0mSELECT * FROM `produtos` WHERE (`produtos`.`promocao` = 1) ORDER BY Rand() LIMIT 9[0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;36;1mProduto Columns (8.0ms)[0m   [0;1mSHOW FIELDS FROM `produtos`[0m
+  [4;35;1mImagem Load (0.0ms)[0m   [0mSELECT * FROM `imagems` WHERE (produto_id = ('6')) ORDER BY RAND() LIMIT 1[0m
+  [4;36;1mImagem Columns (8.0ms)[0m   [0;1mSHOW FIELDS FROM `imagems`[0m
+Completed in 84ms (View: 40, DB: 20) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2011-02-22 14:03:47) [GET]
+  [4;35;1mProduto Load (4.0ms)[0m   [0mSELECT * FROM `produtos` WHERE (`produtos`.`promocao` = 1) ORDER BY Rand() LIMIT 9[0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;36;1mProduto Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `produtos`[0m
+  [4;35;1mImagem Load (4.0ms)[0m   [0mSELECT * FROM `imagems` WHERE (produto_id = ('6')) ORDER BY RAND() LIMIT 1[0m
+  [4;36;1mImagem Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `imagems`[0m
+Completed in 52ms (View: 16, DB: 12) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2011-02-22 14:03:48) [GET]
+  [4;35;1mProduto Load (8.0ms)[0m   [0mSELECT * FROM `produtos` WHERE (`produtos`.`promocao` = 1) ORDER BY Rand() LIMIT 9[0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;36;1mProduto Columns (12.0ms)[0m   [0;1mSHOW FIELDS FROM `produtos`[0m
+  [4;35;1mImagem Load (8.0ms)[0m   [0mSELECT * FROM `imagems` WHERE (produto_id = ('6')) ORDER BY RAND() LIMIT 1[0m
+  [4;36;1mImagem Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `imagems`[0m
+Completed in 88ms (View: 40, DB: 28) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2011-02-22 14:03:58) [GET]
+  [4;35;1mProduto Load (8.0ms)[0m   [0mSELECT * FROM `produtos` WHERE (`produtos`.`promocao` = 1) ORDER BY Rand() LIMIT 9[0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;36;1mProduto Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `produtos`[0m
+  [4;35;1mImagem Load (16.0ms)[0m   [0mSELECT * FROM `imagems` WHERE (produto_id = ('6')) ORDER BY RAND() LIMIT 1[0m
+  [4;36;1mImagem Columns (8.0ms)[0m   [0;1mSHOW FIELDS FROM `imagems`[0m
+Completed in 108ms (View: 28, DB: 32) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2011-02-22 14:04:00) [GET]
+  [4;35;1mProduto Load (12.0ms)[0m   [0mSELECT * FROM `produtos` WHERE (`produtos`.`promocao` = 1) ORDER BY Rand() LIMIT 9[0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;36;1mProduto Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `produtos`[0m
+  [4;35;1mImagem Load (8.0ms)[0m   [0mSELECT * FROM `imagems` WHERE (produto_id = ('6')) ORDER BY RAND() LIMIT 1[0m
+  [4;36;1mImagem Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `imagems`[0m
+Completed in 52ms (View: 12, DB: 28) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2011-02-22 14:04:10) [GET]
+  [4;35;1mProduto Load (4.0ms)[0m   [0mSELECT * FROM `produtos` WHERE (`produtos`.`promocao` = 1) ORDER BY Rand() LIMIT 9[0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;36;1mProduto Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `produtos`[0m
+  [4;35;1mImagem Load (0.0ms)[0m   [0mSELECT * FROM `imagems` WHERE (produto_id = ('6')) ORDER BY RAND() LIMIT 1[0m
+  [4;36;1mImagem Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `imagems`[0m
+Completed in 60ms (View: 32, DB: 8) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2011-02-22 14:04:50) [GET]
+  [4;35;1mProduto Load (4.0ms)[0m   [0mSELECT * FROM `produtos` WHERE (`produtos`.`promocao` = 1) ORDER BY Rand() LIMIT 9[0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;36;1mProduto Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `produtos`[0m
+  [4;35;1mImagem Load (0.0ms)[0m   [0mSELECT * FROM `imagems` WHERE (produto_id = ('6')) ORDER BY RAND() LIMIT 1[0m
+  [4;36;1mImagem Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `imagems`[0m
+Completed in 68ms (View: 40, DB: 8) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2011-02-22 14:04:52) [GET]
+  [4;35;1mProduto Load (4.0ms)[0m   [0mSELECT * FROM `produtos` WHERE (`produtos`.`promocao` = 1) ORDER BY Rand() LIMIT 9[0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;36;1mProduto Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `produtos`[0m
+  [4;35;1mImagem Load (20.0ms)[0m   [0mSELECT * FROM `imagems` WHERE (produto_id = ('6')) ORDER BY RAND() LIMIT 1[0m
+  [4;36;1mImagem Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `imagems`[0m
+Completed in 60ms (View: 16, DB: 24) | 200 OK [http://localhost/]
+  [4;35;1mSQL (4.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2011-02-22 14:05:39) [GET]
+  [4;35;1mProduto Load (16.0ms)[0m   [0mSELECT * FROM `produtos` WHERE (`produtos`.`promocao` = 1) ORDER BY Rand() LIMIT 9[0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;36;1mProduto Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `produtos`[0m
+  [4;35;1mImagem Load (0.0ms)[0m   [0mSELECT * FROM `imagems` WHERE (produto_id = ('6')) ORDER BY RAND() LIMIT 1[0m
+  [4;36;1mImagem Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `imagems`[0m
+Completed in 48ms (View: 24, DB: 20) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2011-02-22 14:05:49) [GET]
+  [4;35;1mProduto Load (0.0ms)[0m   [0mSELECT * FROM `produtos` WHERE (`produtos`.`promocao` = 1) ORDER BY Rand() LIMIT 9[0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;36;1mProduto Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `produtos`[0m
+  [4;35;1mImagem Load (0.0ms)[0m   [0mSELECT * FROM `imagems` WHERE (produto_id = ('6')) ORDER BY RAND() LIMIT 1[0m
+  [4;36;1mImagem Columns (8.0ms)[0m   [0;1mSHOW FIELDS FROM `imagems`[0m
+Completed in 192ms (View: 32, DB: 12) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2011-02-22 14:05:51) [GET]
+  [4;35;1mProduto Load (16.0ms)[0m   [0mSELECT * FROM `produtos` WHERE (`produtos`.`promocao` = 1) ORDER BY Rand() LIMIT 9[0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;36;1mProduto Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `produtos`[0m
+  [4;35;1mImagem Load (8.0ms)[0m   [0mSELECT * FROM `imagems` WHERE (produto_id = ('6')) ORDER BY RAND() LIMIT 1[0m
+  [4;36;1mImagem Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `imagems`[0m
+Completed in 56ms (View: 16, DB: 36) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2011-02-22 14:05:51) [GET]
+  [4;35;1mProduto Load (8.0ms)[0m   [0mSELECT * FROM `produtos` WHERE (`produtos`.`promocao` = 1) ORDER BY Rand() LIMIT 9[0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;36;1mProduto Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `produtos`[0m
+  [4;35;1mImagem Load (4.0ms)[0m   [0mSELECT * FROM `imagems` WHERE (produto_id = ('6')) ORDER BY RAND() LIMIT 1[0m
+  [4;36;1mImagem Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `imagems`[0m
+Completed in 36ms (View: 12, DB: 16) | 200 OK [http://localhost/]
+  [4;35;1mSQL (4.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2011-02-22 14:05:51) [GET]
+  [4;35;1mProduto Load (0.0ms)[0m   [0mSELECT * FROM `produtos` WHERE (`produtos`.`promocao` = 1) ORDER BY Rand() LIMIT 9[0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;36;1mProduto Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `produtos`[0m
+  [4;35;1mImagem Load (4.0ms)[0m   [0mSELECT * FROM `imagems` WHERE (produto_id = ('6')) ORDER BY RAND() LIMIT 1[0m
+  [4;36;1mImagem Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `imagems`[0m
+Completed in 44ms (View: 24, DB: 8) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2011-02-22 14:06:17) [GET]
+  [4;35;1mProduto Load (4.0ms)[0m   [0mSELECT * FROM `produtos` WHERE (`produtos`.`promocao` = 1) ORDER BY Rand() LIMIT 9[0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;36;1mProduto Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `produtos`[0m
+  [4;35;1mImagem Load (0.0ms)[0m   [0mSELECT * FROM `imagems` WHERE (produto_id = ('6')) ORDER BY RAND() LIMIT 1[0m
+  [4;36;1mImagem Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `imagems`[0m
+Completed in 292ms (View: 268, DB: 12) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2011-02-22 14:06:57) [GET]
+  [4;35;1mProduto Load (8.0ms)[0m   [0mSELECT * FROM `produtos` WHERE (`produtos`.`promocao` = 1) ORDER BY Rand() LIMIT 9[0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;36;1mProduto Columns (8.0ms)[0m   [0;1mSHOW FIELDS FROM `produtos`[0m
+  [4;35;1mImagem Load (12.0ms)[0m   [0mSELECT * FROM `imagems` WHERE (produto_id = ('6')) ORDER BY RAND() LIMIT 1[0m
+  [4;36;1mImagem Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `imagems`[0m
+Completed in 88ms (View: 32, DB: 28) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2011-02-22 14:06:59) [GET]
+  [4;35;1mProduto Load (4.0ms)[0m   [0mSELECT * FROM `produtos` WHERE (`produtos`.`promocao` = 1) ORDER BY Rand() LIMIT 9[0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;36;1mProduto Columns (8.0ms)[0m   [0;1mSHOW FIELDS FROM `produtos`[0m
+  [4;35;1mImagem Load (0.0ms)[0m   [0mSELECT * FROM `imagems` WHERE (produto_id = ('6')) ORDER BY RAND() LIMIT 1[0m
+  [4;36;1mImagem Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `imagems`[0m
+Completed in 44ms (View: 16, DB: 16) | 200 OK [http://localhost/]
+  [4;35;1mSQL (4.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2011-02-22 14:07:05) [GET]
+  [4;35;1mProduto Load (0.0ms)[0m   [0mSELECT * FROM `produtos` WHERE (`produtos`.`promocao` = 1) ORDER BY Rand() LIMIT 9[0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;36;1mProduto Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `produtos`[0m
+  [4;35;1mImagem Load (4.0ms)[0m   [0mSELECT * FROM `imagems` WHERE (produto_id = ('6')) ORDER BY RAND() LIMIT 1[0m
+  [4;36;1mImagem Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `imagems`[0m
+Completed in 56ms (View: 28, DB: 16) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2011-02-22 14:07:30) [GET]
+  [4;35;1mProduto Load (4.0ms)[0m   [0mSELECT * FROM `produtos` WHERE (`produtos`.`promocao` = 1) ORDER BY Rand() LIMIT 9[0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;36;1mProduto Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `produtos`[0m
+  [4;35;1mImagem Load (4.0ms)[0m   [0mSELECT * FROM `imagems` WHERE (produto_id = ('6')) ORDER BY RAND() LIMIT 1[0m
+  [4;36;1mImagem Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `imagems`[0m
+Completed in 56ms (View: 32, DB: 8) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2011-02-22 14:07:32) [GET]
+  [4;35;1mProduto Load (4.0ms)[0m   [0mSELECT * FROM `produtos` WHERE (`produtos`.`promocao` = 1) ORDER BY Rand() LIMIT 9[0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;36;1mProduto Columns (8.0ms)[0m   [0;1mSHOW FIELDS FROM `produtos`[0m
+  [4;35;1mImagem Load (4.0ms)[0m   [0mSELECT * FROM `imagems` WHERE (produto_id = ('6')) ORDER BY RAND() LIMIT 1[0m
+  [4;36;1mImagem Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `imagems`[0m
+Completed in 56ms (View: 24, DB: 16) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2011-02-22 14:07:37) [GET]
+  [4;35;1mProduto Load (4.0ms)[0m   [0mSELECT * FROM `produtos` WHERE (`produtos`.`promocao` = 1) ORDER BY Rand() LIMIT 9[0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;36;1mProduto Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `produtos`[0m
+  [4;35;1mImagem Load (0.0ms)[0m   [0mSELECT * FROM `imagems` WHERE (produto_id = ('6')) ORDER BY RAND() LIMIT 1[0m
+  [4;36;1mImagem Columns (8.0ms)[0m   [0;1mSHOW FIELDS FROM `imagems`[0m
+Completed in 100ms (View: 52, DB: 12) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2011-02-22 14:07:47) [GET]
+  [4;35;1mProduto Load (4.0ms)[0m   [0mSELECT * FROM `produtos` WHERE (`produtos`.`promocao` = 1) ORDER BY Rand() LIMIT 9[0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;36;1mProduto Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `produtos`[0m
+  [4;35;1mImagem Load (0.0ms)[0m   [0mSELECT * FROM `imagems` WHERE (produto_id = ('6')) ORDER BY RAND() LIMIT 1[0m
+  [4;36;1mImagem Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `imagems`[0m
+Completed in 68ms (View: 40, DB: 8) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2011-02-22 14:07:49) [GET]
+  [4;35;1mProduto Load (4.0ms)[0m   [0mSELECT * FROM `produtos` WHERE (`produtos`.`promocao` = 1) ORDER BY Rand() LIMIT 9[0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;36;1mProduto Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `produtos`[0m
+  [4;35;1mImagem Load (0.0ms)[0m   [0mSELECT * FROM `imagems` WHERE (produto_id = ('6')) ORDER BY RAND() LIMIT 1[0m
+  [4;36;1mImagem Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `imagems`[0m
+Completed in 52ms (View: 28, DB: 8) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2011-02-22 14:07:57) [GET]
+  [4;35;1mProduto Load (0.0ms)[0m   [0mSELECT * FROM `produtos` WHERE (`produtos`.`promocao` = 1) ORDER BY Rand() LIMIT 9[0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;36;1mProduto Columns (8.0ms)[0m   [0;1mSHOW FIELDS FROM `produtos`[0m
+  [4;35;1mImagem Load (8.0ms)[0m   [0mSELECT * FROM `imagems` WHERE (produto_id = ('6')) ORDER BY RAND() LIMIT 1[0m
+  [4;36;1mImagem Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `imagems`[0m
+Completed in 100ms (View: 48, DB: 16) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2011-02-22 14:08:06) [GET]
+  [4;35;1mProduto Load (12.0ms)[0m   [0mSELECT * FROM `produtos` WHERE (`produtos`.`promocao` = 1) ORDER BY Rand() LIMIT 9[0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;36;1mProduto Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `produtos`[0m
+  [4;35;1mImagem Load (4.0ms)[0m   [0mSELECT * FROM `imagems` WHERE (produto_id = ('6')) ORDER BY RAND() LIMIT 1[0m
+  [4;36;1mImagem Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `imagems`[0m
+Completed in 72ms (View: 28, DB: 20) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2011-02-22 14:08:07) [GET]
+  [4;35;1mProduto Load (12.0ms)[0m   [0mSELECT * FROM `produtos` WHERE (`produtos`.`promocao` = 1) ORDER BY Rand() LIMIT 9[0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;36;1mProduto Columns (8.0ms)[0m   [0;1mSHOW FIELDS FROM `produtos`[0m
+  [4;35;1mImagem Load (12.0ms)[0m   [0mSELECT * FROM `imagems` WHERE (produto_id = ('6')) ORDER BY RAND() LIMIT 1[0m
+  [4;36;1mImagem Columns (8.0ms)[0m   [0;1mSHOW FIELDS FROM `imagems`[0m
+Completed in 60ms (View: 12, DB: 44) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2011-02-22 14:08:12) [GET]
+  [4;35;1mProduto Load (4.0ms)[0m   [0mSELECT * FROM `produtos` WHERE (`produtos`.`promocao` = 1) ORDER BY Rand() LIMIT 9[0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;36;1mProduto Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `produtos`[0m
+  [4;35;1mImagem Load (0.0ms)[0m   [0mSELECT * FROM `imagems` WHERE (produto_id = ('6')) ORDER BY RAND() LIMIT 1[0m
+  [4;36;1mImagem Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `imagems`[0m
+Completed in 68ms (View: 44, DB: 4) | 200 OK [http://localhost/]
+  [4;35;1mSQL (4.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2011-02-22 14:08:21) [GET]
+  [4;35;1mProduto Load (4.0ms)[0m   [0mSELECT * FROM `produtos` WHERE (`produtos`.`promocao` = 1) ORDER BY Rand() LIMIT 9[0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;36;1mProduto Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `produtos`[0m
+  [4;35;1mImagem Load (0.0ms)[0m   [0mSELECT * FROM `imagems` WHERE (produto_id = ('6')) ORDER BY RAND() LIMIT 1[0m
+  [4;36;1mImagem Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `imagems`[0m
+Completed in 52ms (View: 28, DB: 12) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2011-02-22 14:08:44) [GET]
+  [4;35;1mProduto Load (8.0ms)[0m   [0mSELECT * FROM `produtos` WHERE (`produtos`.`promocao` = 1) ORDER BY Rand() LIMIT 9[0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;36;1mProduto Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `produtos`[0m
+  [4;35;1mImagem Load (0.0ms)[0m   [0mSELECT * FROM `imagems` WHERE (produto_id = ('6')) ORDER BY RAND() LIMIT 1[0m
+  [4;36;1mImagem Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `imagems`[0m
+Completed in 68ms (View: 44, DB: 12) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2011-02-22 14:08:46) [GET]
+  [4;35;1mProduto Load (4.0ms)[0m   [0mSELECT * FROM `produtos` WHERE (`produtos`.`promocao` = 1) ORDER BY Rand() LIMIT 9[0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;36;1mProduto Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `produtos`[0m
+  [4;35;1mImagem Load (0.0ms)[0m   [0mSELECT * FROM `imagems` WHERE (produto_id = ('6')) ORDER BY RAND() LIMIT 1[0m
+  [4;36;1mImagem Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `imagems`[0m
+Completed in 176ms (View: 28, DB: 8) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2011-02-22 14:08:54) [GET]
+  [4;35;1mProduto Load (4.0ms)[0m   [0mSELECT * FROM `produtos` WHERE (`produtos`.`promocao` = 1) ORDER BY Rand() LIMIT 9[0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;36;1mProduto Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `produtos`[0m
+  [4;35;1mImagem Load (16.0ms)[0m   [0mSELECT * FROM `imagems` WHERE (produto_id = ('6')) ORDER BY RAND() LIMIT 1[0m
+  [4;36;1mImagem Columns (20.0ms)[0m   [0;1mSHOW FIELDS FROM `imagems`[0m
+Completed in 124ms (View: 52, DB: 40) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2011-02-22 14:09:02) [GET]
+  [4;35;1mProduto Load (12.0ms)[0m   [0mSELECT * FROM `produtos` WHERE (`produtos`.`promocao` = 1) ORDER BY Rand() LIMIT 9[0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;36;1mProduto Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `produtos`[0m
+  [4;35;1mImagem Load (4.0ms)[0m   [0mSELECT * FROM `imagems` WHERE (produto_id = ('6')) ORDER BY RAND() LIMIT 1[0m
+  [4;36;1mImagem Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `imagems`[0m
+Completed in 96ms (View: 56, DB: 24) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2011-02-22 14:09:04) [GET]
+  [4;35;1mProduto Load (4.0ms)[0m   [0mSELECT * FROM `produtos` WHERE (`produtos`.`promocao` = 1) ORDER BY Rand() LIMIT 9[0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;36;1mProduto Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `produtos`[0m
+  [4;35;1mImagem Load (4.0ms)[0m   [0mSELECT * FROM `imagems` WHERE (produto_id = ('6')) ORDER BY RAND() LIMIT 1[0m
+  [4;36;1mImagem Columns (8.0ms)[0m   [0;1mSHOW FIELDS FROM `imagems`[0m
+Completed in 76ms (View: 36, DB: 20) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2011-02-22 14:09:27) [GET]
+  [4;35;1mProduto Load (0.0ms)[0m   [0mSELECT * FROM `produtos` WHERE (`produtos`.`promocao` = 1) ORDER BY Rand() LIMIT 9[0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;36;1mProduto Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `produtos`[0m
+  [4;35;1mImagem Load (0.0ms)[0m   [0mSELECT * FROM `imagems` WHERE (produto_id = ('6')) ORDER BY RAND() LIMIT 1[0m
+  [4;36;1mImagem Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `imagems`[0m
+Completed in 52ms (View: 28, DB: 4) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2011-02-22 14:09:38) [GET]
+  [4;35;1mProduto Load (4.0ms)[0m   [0mSELECT * FROM `produtos` WHERE (`produtos`.`promocao` = 1) ORDER BY Rand() LIMIT 9[0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;36;1mProduto Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `produtos`[0m
+  [4;35;1mImagem Load (0.0ms)[0m   [0mSELECT * FROM `imagems` WHERE (produto_id = ('6')) ORDER BY RAND() LIMIT 1[0m
+  [4;36;1mImagem Columns (8.0ms)[0m   [0;1mSHOW FIELDS FROM `imagems`[0m
+Completed in 52ms (View: 24, DB: 16) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2011-02-22 14:09:58) [GET]
+  [4;35;1mProduto Load (4.0ms)[0m   [0mSELECT * FROM `produtos` WHERE (`produtos`.`promocao` = 1) ORDER BY Rand() LIMIT 9[0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;36;1mProduto Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `produtos`[0m
+  [4;35;1mImagem Load (4.0ms)[0m   [0mSELECT * FROM `imagems` WHERE (produto_id = ('6')) ORDER BY RAND() LIMIT 1[0m
+  [4;36;1mImagem Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `imagems`[0m
+Completed in 52ms (View: 20, DB: 16) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2011-02-22 14:10:09) [GET]
+  [4;35;1mProduto Load (0.0ms)[0m   [0mSELECT * FROM `produtos` WHERE (`produtos`.`promocao` = 1) ORDER BY Rand() LIMIT 9[0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;36;1mProduto Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `produtos`[0m
+  [4;35;1mImagem Load (0.0ms)[0m   [0mSELECT * FROM `imagems` WHERE (produto_id = ('6')) ORDER BY RAND() LIMIT 1[0m
+  [4;36;1mImagem Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `imagems`[0m
+Completed in 52ms (View: 32, DB: 4) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2011-02-22 14:10:56) [GET]
+  [4;35;1mProduto Load (4.0ms)[0m   [0mSELECT * FROM `produtos` WHERE (`produtos`.`promocao` = 1) ORDER BY Rand() LIMIT 9[0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;36;1mProduto Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `produtos`[0m
+  [4;35;1mImagem Load (0.0ms)[0m   [0mSELECT * FROM `imagems` WHERE (produto_id = ('6')) ORDER BY RAND() LIMIT 1[0m
+  [4;36;1mImagem Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `imagems`[0m
+Completed in 52ms (View: 28, DB: 4) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsuariosController#login (for 127.0.0.1 at 2011-02-22 14:11:00) [GET]
+  [4;35;1mUsuario Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `usuarios`[0m
+Redirected to http://localhost:3000/usuarios
+Completed in 20ms (DB: 4) | 302 Found [http://localhost/admin]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsuariosController#index (for 127.0.0.1 at 2011-02-22 14:11:00) [GET]
+  [4;36;1mUsuario Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `usuarios`[0m
+  [4;35;1mUsuario Load (20.0ms)[0m   [0mSELECT * FROM `usuarios` [0m
+Rendering template within layouts/usuarios
+Rendering usuarios/index
+Completed in 40ms (View: 4, DB: 36) | 200 OK [http://localhost/usuarios]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProdutosController#ger (for 127.0.0.1 at 2011-02-22 14:11:01) [GET]
+  [4;36;1mUsuario Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `usuarios`[0m
+  [4;35;1mProduto Load (4.0ms)[0m   [0mSELECT * FROM `produtos` [0m
+Rendering produtos/ger
+  [4;36;1mProduto Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `produtos`[0m
+  [4;35;1mCategoria Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `categorias`[0m
+  [4;36;1mCategoria Load (4.0ms)[0m   [0;1mSELECT * FROM `categorias` WHERE (`categorias`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `categorias` WHERE (`categorias`.`id` = 1) [0m
+  [4;36;1mSubCategoria Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `sub_categorias`[0m
+  [4;35;1mSubCategoria Load (0.0ms)[0m   [0mSELECT * FROM `sub_categorias` WHERE (`sub_categorias`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `sub_categorias` WHERE (`sub_categorias`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `categorias` WHERE (`categorias`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `categorias` WHERE (`categorias`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `sub_categorias` WHERE (`sub_categorias`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `sub_categorias` WHERE (`sub_categorias`.`id` = 1) [0m
+Completed in 80ms (View: 40, DB: 16) | 200 OK [http://localhost/produtos/ger]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProdutosController#edit (for 127.0.0.1 at 2011-02-22 14:11:03) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mUsuario Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `usuarios`[0m
+  [4;36;1mProduto Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `produtos`[0m
+  [4;35;1mProduto Load (0.0ms)[0m   [0mSELECT * FROM `produtos` WHERE (`produtos`.`id` = 1) [0m
+Rendering produtos/edit
+  [4;36;1mCategoria Load (0.0ms)[0m   [0;1mSELECT * FROM `categorias` [0m
+  [4;35;1mCategoria Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `categorias`[0m
+  [4;36;1mCategoria Load (12.0ms)[0m   [0;1mSELECT * FROM `categorias` WHERE (`categorias`.`id` = 1) [0m
+  [4;35;1mSubCategoria Load (0.0ms)[0m   [0mSELECT * FROM `sub_categorias` [0m
+  [4;36;1mSubCategoria Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `sub_categorias`[0m
+Completed in 272ms (View: 236, DB: 20) | 200 OK [http://localhost/produtos/1/edit]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProdutosController#update (for 127.0.0.1 at 2011-02-22 14:11:05) [PUT]
+  Parameters: {"commit"=>"Update", "authenticity_token"=>"XEGIhZdRPNybXxDGjtC6xtlQTBkZ4W0QV59YwJiT+zA=", "id"=>"1", "produto"=>{"titulo"=>"sdfsfds", "nome"=>"Balanca talz", "promocao"=>"1", "preco"=>"200", "linkFabricante"=>"", "modelo"=>"", "categoria_id"=>"1", "descricao"=>"sdfsdfsd", "sub_categoria_id"=>"1", "marca"=>"sdfsd"}}
+  [4;35;1mUsuario Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `usuarios`[0m
+  [4;36;1mProduto Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `produtos`[0m
+  [4;35;1mProduto Load (0.0ms)[0m   [0mSELECT * FROM `produtos` WHERE (`produtos`.`id` = 1) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mProduto Update (4.0ms)[0m   [0mUPDATE `produtos` SET `updated_at` = '2011-02-22 17:11:06', `linkFabricante` = '', `promocao` = 1 WHERE `id` = 1[0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/produtos/1
+Completed in 52ms (DB: 8) | 302 Found [http://localhost/produtos/1]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProdutosController#show (for 127.0.0.1 at 2011-02-22 14:11:06) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mProduto Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `produtos`[0m
+  [4;36;1mProduto Load (0.0ms)[0m   [0;1mSELECT * FROM `produtos` WHERE (`produtos`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering produtos/show
+  [4;35;1mImagem Load (0.0ms)[0m   [0mSELECT * FROM `imagems` WHERE (produto_id = ('1')) ORDER BY RAND() LIMIT 1[0m
+  [4;36;1mImagem Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `imagems`[0m
+
+ActionView::TemplateError (can't convert nil into String) on line #36 of app/views/produtos/show.html.erb:
+33:       </tbody>
+34:     </table>
+35:     <div class="descricao">
+36:         <%= render :file => "public/produtos/" + @produto.descricao_filename %>
+37:         <% if File.exist? "public/produtos/_" + @produto.id.to_s + ".rhtml" %>
+38:           <%= render :file => "public/produtos/_" + @produto.id.to_s + ".rhtml" %>
+39:         <% else %>
+
+    app/views/produtos/show.html.erb:36:in `+'
+    app/views/produtos/show.html.erb:36
+    app/controllers/produtos_controller.rb:68:in `show'
+
+Rendered rescues/_trace (104.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProdutosController#update (for 127.0.0.1 at 2011-02-22 14:11:13) [PUT]
+  Parameters: {"commit"=>"Update", "authenticity_token"=>"XEGIhZdRPNybXxDGjtC6xtlQTBkZ4W0QV59YwJiT+zA=", "id"=>"1", "produto"=>{"titulo"=>"sdfsfds", "nome"=>"Balanca talz", "promocao"=>"1", "preco"=>"200", "linkFabricante"=>"", "modelo"=>"we", "categoria_id"=>"1", "descricao"=>"sdfsdfsd", "sub_categoria_id"=>"1", "marca"=>"sdfsd"}}
+  [4;35;1mUsuario Columns (8.0ms)[0m   [0mSHOW FIELDS FROM `usuarios`[0m
+  [4;36;1mProduto Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `produtos`[0m
+  [4;35;1mProduto Load (0.0ms)[0m   [0mSELECT * FROM `produtos` WHERE (`produtos`.`id` = 1) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mProduto Update (0.0ms)[0m   [0mUPDATE `produtos` SET `updated_at` = '2011-02-22 17:11:13', `modelo` = 'we' WHERE `id` = 1[0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/produtos/1
+Completed in 60ms (DB: 16) | 302 Found [http://localhost/produtos/1]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProdutosController#show (for 127.0.0.1 at 2011-02-22 14:11:13) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mProduto Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `produtos`[0m
+  [4;36;1mProduto Load (0.0ms)[0m   [0;1mSELECT * FROM `produtos` WHERE (`produtos`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering produtos/show
+  [4;35;1mImagem Load (0.0ms)[0m   [0mSELECT * FROM `imagems` WHERE (produto_id = ('1')) ORDER BY RAND() LIMIT 1[0m
+  [4;36;1mImagem Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `imagems`[0m
+
+ActionView::TemplateError (can't convert nil into String) on line #36 of app/views/produtos/show.html.erb:
+33:       </tbody>
+34:     </table>
+35:     <div class="descricao">
+36:         <%= render :file => "public/produtos/" + @produto.descricao_filename %>
+37:         <% if File.exist? "public/produtos/_" + @produto.id.to_s + ".rhtml" %>
+38:           <%= render :file => "public/produtos/_" + @produto.id.to_s + ".rhtml" %>
+39:         <% else %>
+
+    app/views/produtos/show.html.erb:36:in `+'
+    app/views/produtos/show.html.erb:36
+    app/controllers/produtos_controller.rb:68:in `show'
+
+Rendered rescues/_trace (76.0ms)
+Rendered rescues/_request_and_response (4.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (4.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProdutosController#update (for 127.0.0.1 at 2011-02-22 14:11:27) [PUT]
+  Parameters: {"commit"=>"Update", "authenticity_token"=>"XEGIhZdRPNybXxDGjtC6xtlQTBkZ4W0QV59YwJiT+zA=", "id"=>"1", "produto"=>{"titulo"=>"sdfsfds", "nome"=>"Balanca talz", "promocao"=>"1", "preco"=>"200", "linkFabricante"=>"sd", "modelo"=>"we", "categoria_id"=>"1", "descricao"=>"sdfsdfsd", "sub_categoria_id"=>"1", "marca"=>"sdfsd"}}
+  [4;35;1mUsuario Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `usuarios`[0m
+  [4;36;1mProduto Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `produtos`[0m
+  [4;35;1mProduto Load (4.0ms)[0m   [0mSELECT * FROM `produtos` WHERE (`produtos`.`id` = 1) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mProduto Update (4.0ms)[0m   [0mUPDATE `produtos` SET `updated_at` = '2011-02-22 17:11:27', `linkFabricante` = 'sd' WHERE `id` = 1[0m
+  [4;36;1mSQL (8.0ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/produtos/1
+Completed in 80ms (DB: 28) | 302 Found [http://localhost/produtos/1]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProdutosController#show (for 127.0.0.1 at 2011-02-22 14:11:27) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mProduto Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `produtos`[0m
+  [4;36;1mProduto Load (0.0ms)[0m   [0;1mSELECT * FROM `produtos` WHERE (`produtos`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering produtos/show
+  [4;35;1mImagem Load (4.0ms)[0m   [0mSELECT * FROM `imagems` WHERE (produto_id = ('1')) ORDER BY RAND() LIMIT 1[0m
+  [4;36;1mImagem Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `imagems`[0m
+
+ActionView::TemplateError (can't convert nil into String) on line #36 of app/views/produtos/show.html.erb:
+33:       </tbody>
+34:     </table>
+35:     <div class="descricao">
+36:         <%= render :file => "public/produtos/" + @produto.descricao_filename %>
+37:         <% if File.exist? "public/produtos/_" + @produto.id.to_s + ".rhtml" %>
+38:           <%= render :file => "public/produtos/_" + @produto.id.to_s + ".rhtml" %>
+39:         <% else %>
+
+    app/views/produtos/show.html.erb:36:in `+'
+    app/views/produtos/show.html.erb:36
+    app/controllers/produtos_controller.rb:68:in `show'
+
+Rendered rescues/_trace (88.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsuariosController#index (for 127.0.0.1 at 2011-02-22 14:11:29) [GET]
+  [4;35;1mUsuario Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `usuarios`[0m
+  [4;36;1mUsuario Load (0.0ms)[0m   [0;1mSELECT * FROM `usuarios` [0m
+Rendering template within layouts/usuarios
+Rendering usuarios/index
+Completed in 28ms (View: 12, DB: 4) | 200 OK [http://localhost/usuarios]

@@ -29,7 +29,7 @@
     <% @produtos.each do |p| %>
       <div class="item">
         <div class="coluna" style="width:140px;">
-          <%= link_to image_tag( p.get_rand_image_path, :height => 130, :alt => p.titulo, :border => 0), { :action => :visualizar, :id => p.id} %>
+          <%= link_to (image_tag( p.get_rand_image_path, :size =>"10x20", :alt => p.titulo), { :action => :visualizar, :id => p.id}) %>
         </div>
 
         <div class="coluna" style="width:435px; margin-left:10px;">

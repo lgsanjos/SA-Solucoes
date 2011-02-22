@@ -1,6 +1,6 @@
-<h1>Editing produto</h1>
+<h1>Editar produto</h1>
 
-<% form_for(@produto) do |f| %>
+<% form_for(@produto,:html => {:multipart => true}) do |f| %>
   <%= f.error_messages %>
 
   <p>
@@ -28,25 +28,29 @@
     <%= f.text_field :modelo %>
   </p>
   <p>
+    Descri&ccedil;&atilde;o em html:<br />
+    <%= f.file_field :descricao_filename %>
+  </p>
+  <p>
     <%= f.label :preco %><br />
     <%= f.text_field :preco %>
   </p>
   <p>
     <%= f.label :categoria %><br />
-    <%= f.text_field :categoria %>
+    <%= select('produto', 'categoria_id', Categoria.all.collect {|p| [ p.nome, p.id ] }, :selected => @produto.categoria) %>
   </p>
   <p>
     <%= f.label :sub_categoria %><br />
-    <%= f.text_field :sub_categoria %>
+    <%= select('produto', 'sub_categoria_id', SubCategoria.all.collect {|p| [ p.nome, p.id ] }, :selected => @produto.categoria) %>
   </p>
   <p>
     <%= f.label :promocao %><br />
     <%= f.check_box :promocao %>
   </p>
   <p>
-    <%= f.submit 'Update' %>
+    <%= f.submit 'Atualizar' %>
   </p>
 <% end %>
 
 <%= link_to 'Visualizar', @produto %> |
-<%= link_to 'voltar', :controller => :usuarios, :action => :index %>
+<%= link_to 'Voltar', :controller => :usuarios, :action => :index %>

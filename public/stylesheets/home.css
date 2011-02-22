@@ -32,12 +32,17 @@ div.produto_promocao a:hover{
 
 div.produto_imagem{
   margin-top: 10px;
-  height: 210px;
+  width: 210px;
   border: 0px dashed black;
 }
 
 div.produto_promocao img{
   overflow: hidden;
+  width:230px;
+  height: 200px;
+  text-align:center;
+  padding-left: 25px;
+  padding-top: 15px;
 
 }
 
