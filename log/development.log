@@ -1,0 +1,395 @@
+# Logfile created on Tue Feb 22 08:47:30 -0300 2011  [4;36;1mSQL (8.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (4.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2011-02-22 08:48:17) [GET]
+  [4;36;1mProduto Load (208.0ms)[0m   [0;1mSELECT * FROM `produtos` WHERE (`produtos`.`promocao` = 1) ORDER BY Rand() LIMIT 9[0m
+Rendering template within layouts/application
+Rendering home/index
+Completed in 608ms (View: 120, DB: 220) | 200 OK [http://localhost/]
+  [4;35;1mSQL (88.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (44.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsuariosController#login (for 127.0.0.1 at 2011-02-22 08:49:20) [GET]
+  [4;35;1mUsuario Columns (72.0ms)[0m   [0mSHOW FIELDS FROM `usuarios`[0m
+Rendering template within layouts/usuarios
+Rendering usuarios/login
+Completed in 700ms (View: 284, DB: 204) | 200 OK [http://localhost/admin]
+  [4;36;1mSQL (16.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (4.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsuariosController#authenticate (for 127.0.0.1 at 2011-02-22 08:49:37) [POST]
+  Parameters: {"commit"=>"Login", "authenticity_token"=>"XEGIhZdRPNybXxDGjtC6xtlQTBkZ4W0QV59YwJiT+zA=", "usuario"=>{"login"=>"SAnjos", "senha"=>"sasa"}}
+  [4;36;1mUsuario Columns (56.0ms)[0m   [0;1mSHOW FIELDS FROM `usuarios`[0m
+  [4;35;1mUsuario Load (76.0ms)[0m   [0mSELECT * FROM `usuarios` WHERE (`usuarios`.`login` = 'SAnjos' AND `usuarios`.`senha` = 'sasa') [0m
+
+NoMethodError (undefined method `login_url' for #<UsuariosController:0xb6577ab8>):
+  app/controllers/usuarios_controller.rb:27:in `authenticate'
+
+Rendered rescues/_trace (592.0ms)
+Rendered rescues/_request_and_response (12.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (8.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (4.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (60.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (28.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateProdutos (20110103144925)
+Migrating to CreateImagems (20110103145438)
+Migrating to CreateCategorias (20110103150432)
+Migrating to CreateSubCategorias (20110103150455)
+Migrating to CreateContatos (20110109211626)
+Migrating to CreateUsuarios (20110114002356)
+Migrating to AlterProdutos (20110222115946)
+  [4;36;1mSQL (708.0ms)[0m   [0;1mALTER TABLE `produtos` ADD `descricao_filename` varchar(255)[0m
+  [4;35;1mSQL (20.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20110222115946')[0m
+  [4;36;1mSQL (12.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (8.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (12.0ms)[0m   [0mSHOW FIELDS FROM `categorias`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mdescribe `categorias`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW KEYS FROM `categorias`[0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1mSHOW FIELDS FROM `contatos`[0m
+  [4;35;1mSQL (8.0ms)[0m   [0mdescribe `contatos`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW KEYS FROM `contatos`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW FIELDS FROM `imagems`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mdescribe `imagems`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW KEYS FROM `imagems`[0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1mSHOW FIELDS FROM `produtos`[0m
+  [4;35;1mSQL (4.0ms)[0m   [0mdescribe `produtos`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW KEYS FROM `produtos`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW FIELDS FROM `sub_categorias`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mdescribe `sub_categorias`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW KEYS FROM `sub_categorias`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW FIELDS FROM `usuarios`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mdescribe `usuarios`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW KEYS FROM `usuarios`[0m
+  [4;36;1mSQL (96.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (100.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsuariosController#authenticate (for 127.0.0.1 at 2011-02-22 09:23:54) [POST]
+  Parameters: {"commit"=>"Login", "authenticity_token"=>"XEGIhZdRPNybXxDGjtC6xtlQTBkZ4W0QV59YwJiT+zA=", "usuario"=>{"login"=>"SAnjos", "senha"=>"sasa"}}
+  [4;36;1mUsuario Columns (224.0ms)[0m   [0;1mSHOW FIELDS FROM `usuarios`[0m
+  [4;35;1mUsuario Load (76.0ms)[0m   [0mSELECT * FROM `usuarios` WHERE (`usuarios`.`login` = 'SAnjos' AND `usuarios`.`senha` = 'sasa') [0m
+
+NoMethodError (undefined method `login_url' for #<UsuariosController:0xb668fdc4>):
+  app/controllers/usuarios_controller.rb:27:in `authenticate'
+
+Rendered rescues/_trace (1128.0ms)
+Rendered rescues/_request_and_response (16.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsuariosController#authenticate (for 127.0.0.1 at 2011-02-22 09:24:00) [POST]
+  Parameters: {"commit"=>"Login", "authenticity_token"=>"XEGIhZdRPNybXxDGjtC6xtlQTBkZ4W0QV59YwJiT+zA=", "usuario"=>{"login"=>"SAnjos", "senha"=>"sasa"}}
+  [4;36;1mUsuario Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `usuarios`[0m
+  [4;35;1mUsuario Load (0.0ms)[0m   [0mSELECT * FROM `usuarios` WHERE (`usuarios`.`login` = 'SAnjos' AND `usuarios`.`senha` = 'sasa') [0m
+
+NoMethodError (undefined method `login_url' for #<UsuariosController:0xb658caa8>):
+  app/controllers/usuarios_controller.rb:27:in `authenticate'
+
+Rendered rescues/_trace (1372.0ms)
+Rendered rescues/_request_and_response (8.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (8.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsuariosController#authenticate (for 127.0.0.1 at 2011-02-22 09:24:06) [POST]
+  Parameters: {"commit"=>"Login", "authenticity_token"=>"XEGIhZdRPNybXxDGjtC6xtlQTBkZ4W0QV59YwJiT+zA=", "usuario"=>{"login"=>"SAnjos", "senha"=>"sasa"}}
+  [4;36;1mUsuario Columns (40.0ms)[0m   [0;1mSHOW FIELDS FROM `usuarios`[0m
+  [4;35;1mUsuario Load (0.0ms)[0m   [0mSELECT * FROM `usuarios` WHERE (`usuarios`.`login` = 'SAnjos' AND `usuarios`.`senha` = 'sasa') [0m
+
+NoMethodError (undefined method `login_url' for #<UsuariosController:0xb66f4300>):
+  app/controllers/usuarios_controller.rb:27:in `authenticate'
+
+Rendered rescues/_trace (72.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsuariosController#authenticate (for 127.0.0.1 at 2011-02-22 09:24:17) [POST]
+  Parameters: {"commit"=>"Login", "authenticity_token"=>"XEGIhZdRPNybXxDGjtC6xtlQTBkZ4W0QV59YwJiT+zA=", "usuario"=>{"login"=>"SAnjos", "senha"=>"sasa"}}
+  [4;36;1mUsuario Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `usuarios`[0m
+  [4;35;1mUsuario Load (0.0ms)[0m   [0mSELECT * FROM `usuarios` WHERE (`usuarios`.`login` = 'SAnjos' AND `usuarios`.`senha` = 'sasa') [0m
+
+NoMethodError (undefined method `login_url' for #<UsuariosController:0xb65e9af0>):
+  app/controllers/usuarios_controller.rb:27:in `authenticate'
+
+Rendered rescues/_trace (76.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsuariosController#login (for 127.0.0.1 at 2011-02-22 09:24:51) [GET]
+  [4;36;1mUsuario Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `usuarios`[0m
+Rendering template within layouts/usuarios
+Rendering usuarios/login
+Completed in 192ms (View: 172, DB: 4) | 200 OK [http://localhost/admin]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsuariosController#authenticate (for 127.0.0.1 at 2011-02-22 09:25:00) [POST]
+  Parameters: {"commit"=>"Login", "authenticity_token"=>"XEGIhZdRPNybXxDGjtC6xtlQTBkZ4W0QV59YwJiT+zA=", "usuario"=>{"login"=>"admin", "senha"=>"admin"}}
+  [4;35;1mUsuario Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `usuarios`[0m
+  [4;36;1mUsuario Load (80.0ms)[0m   [0;1mSELECT * FROM `usuarios` WHERE (`usuarios`.`login` = 'admin' AND `usuarios`.`senha` = 'admin') [0m
+
+NoMethodError (undefined method `login_url' for #<UsuariosController:0xb66ef3b4>):
+  app/controllers/usuarios_controller.rb:27:in `authenticate'
+
+Rendered rescues/_trace (76.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsuariosController#authenticate (for 127.0.0.1 at 2011-02-22 09:25:08) [POST]
+  Parameters: {"commit"=>"Login", "authenticity_token"=>"XEGIhZdRPNybXxDGjtC6xtlQTBkZ4W0QV59YwJiT+zA=", "usuario"=>{"login"=>"adm", "senha"=>"123"}}
+  [4;35;1mUsuario Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `usuarios`[0m
+  [4;36;1mUsuario Load (4.0ms)[0m   [0;1mSELECT * FROM `usuarios` WHERE (`usuarios`.`login` = 'adm' AND `usuarios`.`senha` = '123') [0m
+Redirected to http://localhost:3000/usuarios
+Completed in 52ms (DB: 8) | 302 Found [http://localhost/usuarios/authenticate]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsuariosController#index (for 127.0.0.1 at 2011-02-22 09:25:08) [GET]
+  [4;35;1mUsuario Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `usuarios`[0m
+  [4;36;1mUsuario Load (4.0ms)[0m   [0;1mSELECT * FROM `usuarios` [0m
+Rendering template within layouts/usuarios
+Rendering usuarios/index
+Completed in 64ms (View: 48, DB: 8) | 200 OK [http://localhost/usuarios]
+  [4;35;1mSQL (4.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsuariosController#index (for 127.0.0.1 at 2011-02-22 09:26:38) [GET]
+  [4;35;1mUsuario Columns (12.0ms)[0m   [0mSHOW FIELDS FROM `usuarios`[0m
+  [4;36;1mUsuario Load (4.0ms)[0m   [0;1mSELECT * FROM `usuarios` [0m
+Rendering template within layouts/usuarios
+Rendering usuarios/index
+Completed in 48ms (View: 16, DB: 24) | 200 OK [http://localhost/usuarios]
+  [4;35;1mSQL (4.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProdutosController#ger (for 127.0.0.1 at 2011-02-22 09:26:40) [GET]
+  [4;35;1mUsuario Columns (8.0ms)[0m   [0mSHOW FIELDS FROM `usuarios`[0m
+  [4;36;1mProduto Load (32.0ms)[0m   [0;1mSELECT * FROM `produtos` [0m
+Rendering produtos/ger
+  [4;35;1mProduto Columns (12.0ms)[0m   [0mSHOW FIELDS FROM `produtos`[0m
+  [4;36;1mCategoria Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `categorias`[0m
+  [4;35;1mCategoria Load (4.0ms)[0m   [0mSELECT * FROM `categorias` WHERE (`categorias`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `categorias` WHERE (`categorias`.`id` = 1) [0m
+  [4;35;1mSubCategoria Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `sub_categorias`[0m
+  [4;36;1mSubCategoria Load (0.0ms)[0m   [0;1mSELECT * FROM `sub_categorias` WHERE (`sub_categorias`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `sub_categorias` WHERE (`sub_categorias`.`id` = 1) [0m
+Completed in 384ms (View: 144, DB: 68) | 200 OK [http://localhost/produtos/ger]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProdutosController#new (for 127.0.0.1 at 2011-02-22 09:26:46) [GET]
+  [4;36;1mUsuario Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `usuarios`[0m
+  [4;35;1mProduto Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `produtos`[0m
+Rendering produtos/new
+  [4;36;1mCategoria Load (0.0ms)[0m   [0;1mSELECT * FROM `categorias` [0m
+  [4;35;1mCategoria Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `categorias`[0m
+  [4;36;1mSubCategoria Load (0.0ms)[0m   [0;1mSELECT * FROM `sub_categorias` [0m
+  [4;35;1mSubCategoria Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `sub_categorias`[0m
+Completed in 128ms (View: 88, DB: 12) | 200 OK [http://localhost/produtos/new]
+  [4;36;1mSQL (4.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (8.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProdutosController#create (for 127.0.0.1 at 2011-02-22 09:27:40) [POST]
+  Parameters: {"commit"=>"Cadastrar", "authenticity_token"=>"XEGIhZdRPNybXxDGjtC6xtlQTBkZ4W0QV59YwJiT+zA=", "produto"=>{"titulo"=>"titulo da balanca", "nome"=>"balanca de teste", "promocao"=>"1", "preco"=>"2000", "descricao_filename"=>#<File:/tmp/RackMultipart20110222-2249-18x9d1d-0>, "modelo"=>"Modelo dela", "categoria_id"=>"1", "descricao"=>"descricaoo aoao aoaoaao aoa", "sub_categoria_id"=>"1", "marca"=>"marca da balanca"}}
+  [4;36;1mUsuario Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `usuarios`[0m
+  [4;35;1mProduto Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `produtos`[0m
+  [4;36;1mSQL (8.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mProduto Create (48.0ms)[0m   [0mINSERT INTO `produtos` (`created_at`, `nome`, `titulo`, `updated_at`, `promocao`, `preco`, `linkFabricante`, `descricao_filename`, `modelo`, `descricao`, `categoria_id`, `marca`, `sub_categoria_id`) VALUES('2011-02-22 12:27:40', 'balanca de teste', 'titulo da balanca', '2011-02-22 12:27:40', 1, 2000, NULL, '--- !ruby/object:File \ncontent_type: text/html\noriginal_path: index.html\n', 'Modelo dela', 'descricaoo aoao aoaoaao aoa', 1, 'marca da balanca', 1)[0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/produtos/ger
+Completed in 272ms (DB: 76) | 302 Found [http://localhost/produtos]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProdutosController#ger (for 127.0.0.1 at 2011-02-22 09:27:40) [GET]
+  [4;35;1mUsuario Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `usuarios`[0m
+  [4;36;1mProduto Load (4.0ms)[0m   [0;1mSELECT * FROM `produtos` [0m
+Rendering produtos/ger
+  [4;35;1mProduto Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `produtos`[0m
+  [4;36;1mCategoria Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `categorias`[0m
+  [4;35;1mCategoria Load (0.0ms)[0m   [0mSELECT * FROM `categorias` WHERE (`categorias`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `categorias` WHERE (`categorias`.`id` = 1) [0m
+  [4;35;1mSubCategoria Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `sub_categorias`[0m
+  [4;36;1mSubCategoria Load (0.0ms)[0m   [0;1mSELECT * FROM `sub_categorias` WHERE (`sub_categorias`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `sub_categorias` WHERE (`sub_categorias`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `categorias` WHERE (`categorias`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `categorias` WHERE (`categorias`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `sub_categorias` WHERE (`sub_categorias`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `sub_categorias` WHERE (`sub_categorias`.`id` = 1) [0m
+Completed in 88ms (View: 56, DB: 12) | 200 OK [http://localhost/produtos/ger]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProdutosController#index (for 127.0.0.1 at 2011-02-22 09:27:46) [GET]
+  Parameters: {"pagina"=>"2"}
+Solicitando INDEX
+@pagina = 2
+@selectedSubCat = pagina
+@selectedCat = pagina
+  [4;36;1mProduto Load (44.0ms)[0m   [0;1mSELECT `produtos`.* FROM `produtos` INNER JOIN `sub_categorias` ON `sub_categorias`.id = `produtos`.sub_categoria_id INNER JOIN `categorias` ON `categorias`.id = `produtos`.categoria_id WHERE ( categorias.nome LIKE '%%' AND sub_categorias.nome LIKE '%%') LIMIT 5, 5[0m
+  [4;35;1mProduto Count (0.0ms)[0m   [0mSELECT Count(`produtos`.id) FROM `produtos`
+ INNER JOIN `sub_categorias` ON `sub_categorias`.id = `produtos`.sub_categoria_id 
+ INNER JOIN `categorias` ON `categorias`.id = `produtos`.categoria_id
+ WHERE ( categorias.nome LIKE '%%'
+ AND sub_categorias.nome LIKE '%%')[0m
+@totPag = 0
+  [4;36;1mCategoria Load (4.0ms)[0m   [0;1mSELECT * FROM `categorias` [0m
+  [4;35;1mSubCategoria Load (0.0ms)[0m   [0mSELECT * FROM `sub_categorias` [0m
+Rendering template within layouts/application
+Rendering produtos/index
+  [4;36;1mCategoria Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `categorias`[0m
+  [4;35;1mSubCategoria Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `sub_categorias`[0m
+  [4;36;1mCategoria Load (0.0ms)[0m   [0;1mSELECT * FROM `categorias` WHERE (`categorias`.`id` = 1) [0m
+pag= 1
+Completed in 148ms (View: 64, DB: 48) | 200 OK [http://localhost/produtos/2]
+  [4;35;1mSQL (8.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProdutosController#index (for 127.0.0.1 at 2011-02-22 09:27:52) [GET]
+  Parameters: {"categorias"=>"balanca", "subcategorias"=>"testeeee", "pagina"=>"1"}
+Solicitando INDEX
+@pagina = 1
+@selectedSubCat = testeeee
+@selectedCat = balanca
+  [4;35;1mProduto Load (0.0ms)[0m   [0mSELECT `produtos`.* FROM `produtos` INNER JOIN `sub_categorias` ON `sub_categorias`.id = `produtos`.sub_categoria_id INNER JOIN `categorias` ON `categorias`.id = `produtos`.categoria_id WHERE ( categorias.nome LIKE '%balanca%' AND sub_categorias.nome LIKE '%testeeee%') LIMIT 0, 5[0m
+  [4;36;1mProduto Count (0.0ms)[0m   [0;1mSELECT Count(`produtos`.id) FROM `produtos`
+ INNER JOIN `sub_categorias` ON `sub_categorias`.id = `produtos`.sub_categoria_id 
+ INNER JOIN `categorias` ON `categorias`.id = `produtos`.categoria_id
+ WHERE ( categorias.nome LIKE '%balanca%'
+ AND sub_categorias.nome LIKE '%testeeee%')[0m
+@totPag = 0
+  [4;35;1mCategoria Load (0.0ms)[0m   [0mSELECT * FROM `categorias` [0m
+  [4;36;1mSubCategoria Load (0.0ms)[0m   [0;1mSELECT * FROM `sub_categorias` [0m
+Rendering template within layouts/application
+Rendering produtos/index
+  [4;35;1mCategoria Columns (8.0ms)[0m   [0mSHOW FIELDS FROM `categorias`[0m
+  [4;36;1mSubCategoria Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `sub_categorias`[0m
+  [4;35;1mCategoria Load (0.0ms)[0m   [0mSELECT * FROM `categorias` WHERE (`categorias`.`id` = 1) [0m
+  [4;36;1mProduto Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `produtos`[0m
+  [4;35;1mImagem Load (28.0ms)[0m   [0mSELECT * FROM `imagems` WHERE (produto_id = ('1')) ORDER BY RAND() LIMIT 1[0m
+  [4;36;1mImagem Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `imagems`[0m
+  [4;35;1mImagem Load (8.0ms)[0m   [0mSELECT * FROM `imagems` WHERE (produto_id = ('2')) ORDER BY RAND() LIMIT 1[0m
+pag= 1
+Completed in 192ms (View: 80, DB: 52) | 200 OK [http://localhost/produtos/balanca/testeeee/1]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-02-22 09:27:53) [GET]
+  Parameters: {"1297288541"=>nil}
+
+ActionController::RoutingError (No route matches "/images/" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProdutosController#show (for 127.0.0.1 at 2011-02-22 09:28:00) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mProduto Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `produtos`[0m
+  [4;35;1mProduto Load (4.0ms)[0m   [0mSELECT * FROM `produtos` WHERE (`produtos`.`id` = 2) [0m
+Rendering template within layouts/application
+Rendering produtos/show
+  [4;36;1mImagem Load (8.0ms)[0m   [0;1mSELECT * FROM `imagems` WHERE (produto_id = ('2')) ORDER BY RAND() LIMIT 1[0m
+
+ActionView::TemplateError (Missing template public/produtos/_2.rhtml in view path app/views) on line #36 of app/views/produtos/show.html.erb:
+33:       </tbody>
+34:     </table>
+35:     <div class="descricao">
+36:       <%= render :file => "public/produtos/_" + @produto.id.to_s + ".rhtml" %>
+37:     </div>
+38:   </div>
+39: </div>
+
+    app/views/produtos/show.html.erb:36
+    app/controllers/produtos_controller.rb:68:in `show'
+
+Rendered rescues/_trace (88.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (8.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProdutosController#show (for 127.0.0.1 at 2011-02-22 09:30:19) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mProduto Columns (20.0ms)[0m   [0mSHOW FIELDS FROM `produtos`[0m
+  [4;36;1mProduto Load (4.0ms)[0m   [0;1mSELECT * FROM `produtos` WHERE (`produtos`.`id` = 2) [0m
+Rendering template within layouts/application
+Rendering produtos/show
+  [4;35;1mImagem Load (72.0ms)[0m   [0mSELECT * FROM `imagems` WHERE (produto_id = ('2')) ORDER BY RAND() LIMIT 1[0m
+Completed in 172ms (View: 40, DB: 104) | 200 OK [http://localhost/produtos/visualizar/2]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (4.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-02-22 09:30:20) [GET]
+  Parameters: {"1297288541"=>nil}
+
+ActionController::RoutingError (No route matches "/images/" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (8.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (12.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProdutosController#show (for 127.0.0.1 at 2011-02-22 09:31:06) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mProduto Columns (36.0ms)[0m   [0;1mSHOW FIELDS FROM `produtos`[0m
+  [4;35;1mProduto Load (8.0ms)[0m   [0mSELECT * FROM `produtos` WHERE (`produtos`.`id` = 2) [0m
+Rendering template within layouts/application
+Rendering produtos/show
+  [4;36;1mImagem Load (20.0ms)[0m   [0;1mSELECT * FROM `imagems` WHERE (produto_id = ('2')) ORDER BY RAND() LIMIT 1[0m
+Completed in 436ms (View: 276, DB: 84) | 200 OK [http://localhost/produtos/visualizar/2]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProdutosController#show (for 127.0.0.1 at 2011-02-22 09:31:08) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mProduto Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `produtos`[0m
+  [4;36;1mProduto Load (0.0ms)[0m   [0;1mSELECT * FROM `produtos` WHERE (`produtos`.`id` = 2) [0m
+Rendering template within layouts/application
+Rendering produtos/show
+  [4;35;1mImagem Load (0.0ms)[0m   [0mSELECT * FROM `imagems` WHERE (produto_id = ('2')) ORDER BY RAND() LIMIT 1[0m
+Completed in 36ms (View: 16, DB: 0) | 200 OK [http://localhost/produtos/visualizar/2]
+  [4;36;1mSQL (16.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (4.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-02-22 09:31:13) [GET]
+  Parameters: {"1297288541"=>nil}
+
+ActionController::RoutingError (No route matches "/images/" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)

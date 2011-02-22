@@ -1,6 +1,6 @@
 <h1>Novo Produto</h1>
 
-<% form_for(@produto, :url => {:action => "create"}) do |f| %>
+<% form_for(@produto, :url => {:action => "create"}, :html => {:multipart => true}) do |f| %>
   <%= f.error_messages %>
 
   <p>
@@ -13,7 +13,11 @@
   </p>
   <p>
     <%= f.label :descricao %><br />
-    <%= f.text_area :descricao %>
+    <%= f.text_area :descricao, :rows => 4, :cols => 40 %>
+  </p>
+  <p>
+    Descri&ccedil;&atilde;o em html:<br />
+    <%= f.file_field :descricao_filename %>
   </p>
   <p>
     <%= f.label :marca %><br />
@@ -24,7 +28,7 @@
     <%= f.text_field :modelo %>
   </p>
   <p>
-    <%= f.label :preco %><br />
+    <%= f.label :preco %>R$<br />
     <%= f.text_field :preco %>
   </p>
   <p>

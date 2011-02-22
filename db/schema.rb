@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110114002356) do
+ActiveRecord::Schema.define(:version => 20110222115946) do
 
   create_table "categorias", :force => true do |t|
     t.string   "nome"
@@ -47,12 +47,13 @@ ActiveRecord::Schema.define(:version => 20110114002356) do
     t.string   "linkFabricante"
     t.string   "marca"
     t.string   "modelo"
-    t.integer  "preco",            :limit => 10, :precision => 10, :scale => 0
+    t.integer  "preco",              :limit => 10, :precision => 10, :scale => 0
     t.integer  "categoria_id"
     t.integer  "sub_categoria_id"
     t.boolean  "promocao"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "descricao_filename"
   end
 
   create_table "sub_categorias", :force => true do |t|

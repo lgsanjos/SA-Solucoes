@@ -20,4 +20,14 @@ class Produto < ActiveRecord::Base
 
   end
 
+  def save_file(upload)
+    name = upload['descricao_filename'].original_filename
+    directory = "public/produtos/_"
+
+    path = File.join(directory, name)
+    File.open(path, "wb") { |f| f.write(upload['descricao_filename'].read) }
+
+    name
+  end
+
 end

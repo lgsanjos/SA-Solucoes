@@ -22,7 +22,7 @@
           <td valign="top"><p class="titulo">Nome:</p> <%= @produto.nome %></td>
         </tr>
         <tr>
-          <td valign="top"><p class="titulo">Modelo:</p> <%= @produto.titulo %></td>
+          <td valign="top"><p class="titulo">Modelo:</p> <%= @produto.modelo %></td>
         </tr>
         <tr>
           <td valign="top"><p class="titulo">Pre&ccedil;o:</p> R$ <%= @produto.preco %></td>
@@ -33,7 +33,14 @@
       </tbody>
     </table>
     <div class="descricao">
-      <%= render :file => "public/produtos/_" + @produto.id.to_s + ".rhtml" %>
+      <% if File.exist? "public/produtos/_" + @produto.descricao_filename %>
+        <%= render :file => "public/produtos/_" + @produto.descricao_filename %>
+      <% else %>
+        <% if File.exist? "public/produtos/_" + @produto.id.to_s + ".rhtml" %>
+          <%= render :file => "public/produtos/_" + @produto.id.to_s + ".rhtml" %>
+        <% end %>
+      <% end %>
+
     </div>
   </div>
 </div>
