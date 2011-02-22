@@ -89,6 +89,7 @@ class ProdutosController < ApplicationController
   # POST /produtos.xml
   def create
     @produto = Produto.new(params[:produto])
+    @produto.descricao_filename = @produto.save_file(params[:produto])
     @produto.save
 
     redirect_to :action => :ger
@@ -117,7 +118,7 @@ class ProdutosController < ApplicationController
     @produto.destroy
 
     respond_to do |format|
-      format.html { redirect_to(produtos_url) }
+      format.html { redirect_to( :action => :ger) }
       format.xml  { head :ok }
     end
   end
