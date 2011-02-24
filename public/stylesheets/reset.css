@@ -45,6 +45,7 @@ p,
 blockquote,
 th,
 td {
+        outline: 0px white;
 	margin:0;
 	padding:0;
 }

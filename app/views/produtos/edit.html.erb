@@ -13,11 +13,7 @@
   </p>
   <p>
     <%= f.label :descricao %><br />
-    <%= f.text_field :descricao %>
-  </p>
-  <p>
-    <%= f.label :linkFabricante %><br />
-    <%= f.text_field :linkFabricante %>
+    <%= f.text_area :descricao %>
   </p>
   <p>
     <%= f.label :marca %><br />
@@ -32,7 +28,7 @@
     <%= f.file_field :descricao_filename %>
   </p>
   <p>
-    <%= f.label :preco %><br />
+    <%= f.label :preco %> R$<br />
     <%= f.text_field :preco %>
   </p>
   <p>

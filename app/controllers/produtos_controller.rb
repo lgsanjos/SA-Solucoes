@@ -99,10 +99,12 @@ class ProdutosController < ApplicationController
   # PUT /produtos/1.xml
   def update
     @produto = Produto.find(params[:id])
-
     respond_to do |format|
       if @produto.update_attributes(params[:produto])
-        format.html { redirect_to(@produto, :notice => 'Produto was successfully updated.') }
+        @produto.descricao_filename = @produto.save_file(params[:produto]) unless params[:produto][:descricao_filename].blank?
+        @produto.save
+
+        format.html { redirect_to(:action => :ger, :notice => 'Produto foi atualizado com sucesso.') }
         format.xml  { head :ok }
       else
         format.html { render :action => "edit" }

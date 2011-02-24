@@ -62,12 +62,14 @@ div#page div#mainMenu a:visited{
   padding: 0px 25px;
   color: #FFF;
   text-shadow: #666 3px 1px 5px;
+  outline-style: none;
 }
 
 div#page div#mainMenu a:hover{
    text-decoration: none;
    text-shadow: #000 3px 1px 5px;
    background: #bbb;
+   outline-style: none;
 }
 
 

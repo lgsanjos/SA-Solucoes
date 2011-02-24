@@ -23,6 +23,10 @@ div.produto_promocao a:visited{
   text-decoration: none;
   color: black;
   font-size: 100%;
+
+  outline-style: none;
+  border: none;
+  cue: none;
 }
 
 div.produto_promocao a:hover{
@@ -38,11 +42,16 @@ div.produto_imagem{
 
 div.produto_promocao img{
   overflow: hidden;
+
   width:230px;
   height: 200px;
-  text-align:center;
-  padding-left: 25px;
-  padding-top: 15px;
+  
+  margin-left: 25px;
+  margin-top: 15px;
+
+  outline-style: none;
+  border: none;
+  cue: none;
 
 }
 
