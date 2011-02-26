@@ -37,7 +37,9 @@
     </table>
     <div class="descricao">
       <% unless @produto.descricao_filename == nil %>
-        <%= render(:file => "public/produtos/#{@produto.descricao_filename}", :charset => "utf-8").gsub("  ", " ") %>
+        <%= render(:file => "public/produtos/#{@produto.descricao_filename}").gsub("  ", " ").
+            gsub('<meta http-equiv=Content-Type content="text/html; charset=windows-1252">', '');
+        %>
       <% else %>
         <%= @produto.descricao %>
       <% end %>
