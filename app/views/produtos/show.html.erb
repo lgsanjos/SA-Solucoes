@@ -37,7 +37,7 @@
     </table>
     <div class="descricao">
       <% unless @produto.descricao_filename == nil %>
-        <%= render :file => "public/produtos/#{@produto.descricao_filename}", :charset => "utf8" %>
+        <%= render :file => "public/produtos/#{@produto.descricao_filename}", :charset => "utf-8" %>
       <% else %>
         <%= @produto.descricao %>
       <% end %>

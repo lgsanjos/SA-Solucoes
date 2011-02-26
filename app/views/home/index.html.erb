@@ -7,15 +7,15 @@
 
     <div class="produto_promocao">
       <div class="produto_imagem">
-         <a href="<%= url_for :controller => :produtos, :action => :visualizar, :id => p.id %>">
-           <%= image_tag p.get_rand_image_path, :alt => p.titulo, :border => 0, :height => 227 %>
+         <a href="<%= url_for :controller => :produtos, :action => :visualizar, :id => p.nome %>">
+           <%= image_tag p.get_rand_image_path, :alt => p.titulo, :border => 0 %>
          </a>
       </div>
       <div>
         <br/>
         <p>
           <a href="<%= url_for :controller => :produtos, :action => :visualizar, :id => p.nome %>">
-            <%= "#{p.nome[0..20]} #{' ...' if p.nome.length > 20}" %> R$ <%= p.preco %>,00
+            <%= "#{p.nome[0..30]} #{' ...' if p.nome.length > 30}" %>
           </a>
         </p>
       </div>

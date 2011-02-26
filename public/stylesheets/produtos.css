@@ -35,6 +35,24 @@ div#produtos div.item{
 
 }
 
+div#produtos div.item img{
+   height: 130px;
+   width: 150px;
+   overflow: hidden;
+}
+
+div#produtos div.item a:link,
+div#produtos div.item a:visited{
+  text-shadow: #AAA 3px 1px 5px;
+  text-decoration: none;
+  color: red;
+}
+
+div#produtos div.item a:hover{
+  text-decoration: underline;
+  text-shadow: #666 3px 1px 5px;
+  
+}
 
 
 div#produtos div#paginas{
