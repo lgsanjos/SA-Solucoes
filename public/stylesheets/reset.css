@@ -11,7 +11,7 @@ build: 2676
 */
 html{
 	color:#000;
-	background:#ddd;
+
 }
 /*
 	TODO remove settings on BODY since we can't namespace it.

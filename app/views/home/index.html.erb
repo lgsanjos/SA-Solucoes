@@ -15,7 +15,7 @@
         <br/>
         <p>
           <a href="<%= url_for :controller => :produtos, :action => :visualizar, :id => p.nome %>">
-            <%= "#{p.nome[0..30]} #{' ...' if p.nome.length > 30}" %>
+            <%= "#{p.nome[0..35]} #{' ...' if p.nome.length > 35}" %>
           </a>
         </p>
       </div>

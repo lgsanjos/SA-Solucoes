@@ -208,10 +208,11 @@ div#produtoProfile div#content p.titulo{
 
 div#produtoProfile div#content .descricao{
   margin: 0px;
+  margin-top: 20px;
   
-  height: 340px;
+  height: 400px;
   width:100%;
-  overflow:  scroll;
+  overflow:  hidden;
   
 
 }
