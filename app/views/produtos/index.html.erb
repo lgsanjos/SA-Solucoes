@@ -29,7 +29,7 @@
     <% @produtos.each do |p| %>
       <div class="item">
         <div class="coluna" style="width:140px;">
-          <%= link_to (image_tag( p.get_rand_image_path, :alt => p.titulo), { :action => :visualizar, :id => p.nome}) %>
+          <%= link_to (image_tag( p.get_rand_image_path, :alt => p.titulo), { :action => :visualizar, :id => p.id}) %>
         </div>
 
         <div class="coluna" style="width:435px; margin-left:10px;">
@@ -39,7 +39,7 @@
               <td></td>
             </th>
             <tr>
-              <td colspan="2"><p class="nome"><%= link_to p.nome, { :action => :visualizar, :id => p.nome} %></p></td>
+              <td colspan="2"><p class="nome"><%= link_to p.nome, { :action => :visualizar, :id => p.id} %></p></td>
             </tr>
             <tr>
               <td><p class="titulo"><%=p.titulo%></p></td>

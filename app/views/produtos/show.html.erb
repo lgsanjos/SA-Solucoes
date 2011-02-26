@@ -5,7 +5,7 @@
 <div id="produtoProfile">
   <div id="content">
     <h1><%= @produto.nome %></h1>
-    <h2><%= "#{@produto.titulo} - R$ #{@produto.preco}" %></h2>
+    <h2><%= "#{@produto.titulo} - R$ #{@produto.preco},00" %></h2>
 
     <table width="100%">
       <thead>
@@ -18,7 +18,7 @@
 
       <tbody>
         <tr>
-          <td rowspan="5" colspan="2"><%= image_tag @produto.get_rand_image_path, :alt => @produto.nome %></td>
+          <td rowspan="5" colspan="2"><%= image_tag @produto.get_rand_image_path, :size => "160x200", :alt => @produto.nome %></td>
           <td valign="top"><p class="titulo">Nome:</p> <%= @produto.nome %></td>
         </tr>
         <tr>
