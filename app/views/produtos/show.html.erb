@@ -37,8 +37,11 @@
     </table>
     <div class="descricao">
       <% unless @produto.descricao_filename == nil %>
+        <% #<meta http-equiv=Content-Type content="text/html; charset=windows-1252"> %>
         <%= render(:file => "public/produtos/#{@produto.descricao_filename}").tr("  ", " ").
-            tr('^[<meta http-equiv=Content-Type content="text/html; charset=windows-1252">]', '');
+            gsub('charset=windows-1252', ' ');
+
+
 
 
         %>
