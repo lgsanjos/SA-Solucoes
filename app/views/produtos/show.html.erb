@@ -37,7 +37,7 @@
     </table>
     <div class="descricao">
       <% unless @produto.descricao_filename == nil %>
-        <%= render(:file => "public/produtos/#{@produto.descricao_filename}").tr("  ", " ").
+        <%= render(:file => "public/produtos/#{@produto.descricao_filename}").upcase!.tr("  ", " ").
             tr('<meta http-equiv=Content-Type content="text/html; charset=windows-1252">', '');
         %>
       <% else %>
