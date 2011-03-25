@@ -130,4 +130,9 @@ class ProdutosController < ApplicationController
 
     render :layout => false
   end
+
+  def renderfile
+
+    render :file => "public/produtos/#{params[:id]}"
+  end
 end

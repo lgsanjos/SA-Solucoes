@@ -38,7 +38,7 @@
     <div id="descricao" class="descricao" style="unicode-bidi: embed;">
       <% unless @produto.descricao_filename == nil %>
         <% #<meta http-equiv=Content-Type content="text/html; charset=windows-1252"> %>
-        <%= render(:file => "public/produtos/#{@produto.descricao_filename}").tr("  ", " ").
+        <% render(:file => "public/produtos/#{@produto.descricao_filename}"). gsub("  ", " ").
             gsub('meta http-equiv=Content-Type content="text/html; charset=windows-1252"', '').
             gsub('<>', '');
         %>
@@ -50,3 +50,13 @@
     </div>
   </div>
 </div>
+
+<script>
+   $.get("<%="renderfile/#{@produto.descricao_filename}"%>", function(data) {
+     data.replace('meta http-equiv=Content-Type content="text/html; charset=windows-1252"', '');
+     data.replace('  ', ' ');
+     $("#descricao").html(data);
+
+   });
+            
+</script>
