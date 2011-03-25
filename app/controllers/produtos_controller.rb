@@ -74,8 +74,8 @@ class ProdutosController < ApplicationController
   end
 
 
-  def renderdescricao(aFile)
-    file = File.open("public/produtos/#{aFile}", "r")
+  def renderdescricao(afile)
+    file = File.open("public/produtos/" + afile.to_s, "r")
     _content = "";
     if file
       file.each_byte {|ch| _content.concat(ch) }
