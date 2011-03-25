@@ -1,6 +1,6 @@
 class ProdutosController < ApplicationController
 
-  before_filter :check_permission, :except => [:index, :show]
+  before_filter :check_permission, :except => [:index, :show, :renderfile]
 
   # GET /produtos
   # GET /produtos.xml
@@ -133,11 +133,13 @@ class ProdutosController < ApplicationController
 
   def renderfile
     file = File.open("public/produtos/#{params[:file]}", "r")
+    _content = "";
     if file
-      _content = "";
       file.each_byte {|ch| _content.concat(ch) }
       render :layout => false, :text => _content.to_s
-      file.close
+    else
+      render :layout => false, :text => _content.to_s
     end
+    file.close
   end
 end

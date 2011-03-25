@@ -2595,3 +2595,165 @@ ActionController::RoutingError (No route matches "/images/upload/gui2.jpg" with 
   /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
 
 Rendering rescues/layout (not_found)
+  [4;36;1mSQL (2.5ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.5ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2011-03-24 23:28:02) [GET]
+  [4;36;1mProduto Load (3.5ms)[0m   [0;1mSELECT * FROM `produtos` WHERE (`produtos`.`promocao` = 1) ORDER BY Rand() LIMIT 9[0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;35;1mProduto Columns (4.3ms)[0m   [0mSHOW FIELDS FROM `produtos`[0m
+  [4;36;1mImagem Load (2.0ms)[0m   [0;1mSELECT * FROM `imagems` WHERE (produto_id = ('1')) ORDER BY RAND() LIMIT 1[0m
+  [4;35;1mImagem Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `imagems`[0m
+Completed in 78ms (View: 41, DB: 17) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2011-03-24 23:28:02) [GET]
+  [4;36;1mProduto Load (4.5ms)[0m   [0;1mSELECT * FROM `produtos` WHERE (`produtos`.`promocao` = 1) ORDER BY Rand() LIMIT 9[0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;35;1mProduto Columns (5.1ms)[0m   [0mSHOW FIELDS FROM `produtos`[0m
+  [4;36;1mImagem Load (2.0ms)[0m   [0;1mSELECT * FROM `imagems` WHERE (produto_id = ('1')) ORDER BY RAND() LIMIT 1[0m
+  [4;35;1mImagem Columns (8.8ms)[0m   [0mSHOW FIELDS FROM `imagems`[0m
+Completed in 60ms (View: 28, DB: 21) | 200 OK [http://localhost/]
+  [4;36;1mSQL (2.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-03-24 23:28:03) [GET]
+
+ActionController::RoutingError (No route matches "/images/upload/gui2.jpg" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (8.6ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (6.5ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-03-24 23:28:03) [GET]
+
+ActionController::RoutingError (No route matches "/images/upload/gui2.jpg" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2011-03-24 23:28:05) [GET]
+  [4;36;1mProduto Load (6.2ms)[0m   [0;1mSELECT * FROM `produtos` WHERE (`produtos`.`promocao` = 1) ORDER BY Rand() LIMIT 9[0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;35;1mProduto Columns (7.1ms)[0m   [0mSHOW FIELDS FROM `produtos`[0m
+  [4;36;1mImagem Load (3.1ms)[0m   [0;1mSELECT * FROM `imagems` WHERE (produto_id = ('1')) ORDER BY RAND() LIMIT 1[0m
+  [4;35;1mImagem Columns (3.2ms)[0m   [0mSHOW FIELDS FROM `imagems`[0m
+Completed in 62ms (View: 31, DB: 20) | 200 OK [http://localhost/]
+  [4;36;1mSQL (1.9ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-03-24 23:28:06) [GET]
+
+ActionController::RoutingError (No route matches "/images/upload/gui2.jpg" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-03-24 23:28:06) [GET]
+
+ActionController::RoutingError (No route matches "/images/upload/gui2.jpg" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProdutosController#show (for 127.0.0.1 at 2011-03-24 23:28:09) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mProduto Columns (15.8ms)[0m   [0;1mSHOW FIELDS FROM `produtos`[0m
+  [4;35;1mProduto Load (3.2ms)[0m   [0mSELECT * FROM `produtos` WHERE (`produtos`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering produtos/show
+  [4;36;1mImagem Load (2.2ms)[0m   [0;1mSELECT * FROM `imagems` WHERE (produto_id = ('1')) ORDER BY RAND() LIMIT 1[0m
+  [4;35;1mImagem Columns (3.2ms)[0m   [0mSHOW FIELDS FROM `imagems`[0m
+Completed in 86ms (View: 46, DB: 25) | 200 OK [http://localhost/produtos/visualizar/1]
+  [4;36;1mSQL (2.4ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-03-24 23:28:09) [GET]
+
+ActionController::RoutingError (No route matches "/images/upload/gui2.jpg" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProdutosController#renderfile (for 127.0.0.1 at 2011-03-24 23:28:09) [GET]
+  Parameters: {"file"=>"hello"}
+Redirected to http://localhost:3000/admin
+Filter chain halted as [:check_permission] rendered_or_redirected.
+Completed in 45ms (DB: 1) | 302 Found [http://localhost/produtos/renderfile/hello]
+  [4;36;1mSQL (0.9ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsuariosController#login (for 127.0.0.1 at 2011-03-24 23:28:10) [GET]
+  [4;36;1mUsuario Columns (3.3ms)[0m   [0;1mSHOW FIELDS FROM `usuarios`[0m
+Rendering template within layouts/usuarios
+Rendering usuarios/login
+Completed in 83ms (View: 67, DB: 5) | 200 OK [http://localhost/admin]
