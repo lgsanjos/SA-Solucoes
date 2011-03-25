@@ -81,7 +81,7 @@ class ProdutosController < ApplicationController
     _content = "";
     if file
       file.each_byte {|ch| _content.concat(ch) }
-      return _content.to_s.gsub('meta http-equiv=Content-Type content="text/html; charset=windows-1252"', '').gsub('<>','')
+      return _content.to_s.gsub('meta http-equiv=Content-Type content="text/html; charset=windows-1252"', '').gsub('<>','').gsub('  ', ' ')
     else
       return _content.to_s
     end
