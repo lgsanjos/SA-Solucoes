@@ -76,10 +76,12 @@ class ProdutosController < ApplicationController
 
   def renderdescricao(afile)
     file = File.open("public/produtos/" + afile.to_s, "r")
+
+    
     _content = "";
     if file
       file.each_byte {|ch| _content.concat(ch) }
-      return _content.to_s
+      return _content.to_s.gsub('meta http-equiv=Content-Type content="text/html; charset=windows-1252"', '').gsub('<>','')
     else
       return _content.to_s
     end
