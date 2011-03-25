@@ -65,11 +65,27 @@ class ProdutosController < ApplicationController
       @produto = Produto.find(:first, :conditions => [ 'nome like ?', '%' + id + '%'])
     end
 
+    @prodDescricao = renderdescricao @produto.descricao_filename
+
     respond_to do |format|
       format.html # show.html.erb
       format.xml  { render :xml => @produto }
     end
   end
+
+
+  def renderdescricao(aFile)
+    file = File.open("public/produtos/#{aFile}", "r")
+    _content = "";
+    if file
+      file.each_byte {|ch| _content.concat(ch) }
+      return _content.to_s
+    else
+      return _content.to_s
+    end
+    file.close
+  end
+
 
   # GET /produtos/new
   # GET /produtos/new.xml
@@ -131,15 +147,7 @@ class ProdutosController < ApplicationController
     render :layout => false
   end
 
-  def renderfile
-    file = File.open("public/produtos/#{params[:file]}", "r")
-    _content = "";
-    if file
-      file.each_byte {|ch| _content.concat(ch) }
-      render :layout => false, :text => _content.to_s
-    else
-      render :layout => false, :text => _content.to_s
-    end
-    file.close
+  def renderfile()
+    render :layout => false, :text => renderDescricao(params[:file])
   end
 end
