@@ -132,7 +132,12 @@ class ProdutosController < ApplicationController
   end
 
   def renderfile
-
-    render :file => "public/produtos/#{params[:id]}"
+    file = File.open("public/produtos/#{params[:file]}", "r")
+    if file
+      _content = "";
+      file.each_byte {|ch| _content.concat(ch) }
+      render :layout => false, :text => _content.to_s
+      file.close
+    end
   end
 end

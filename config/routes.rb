@@ -16,7 +16,7 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :contatos
 
   map.resources :empresa
-  map.connect '/renderfile/:file', :controller => "produtos", :action => 'renderfile'
+  map.connect '/produtos/renderfile/:file', :controller => "produtos", :action => 'renderfile'
   map.connect '/produtos/new', :controller => 'produtos', :action => 'new'
   map.connect '/produtos/ger', :controller => 'produtos', :action => 'ger'
   map.resources :produtos
