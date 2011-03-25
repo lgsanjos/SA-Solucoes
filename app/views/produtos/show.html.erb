@@ -42,6 +42,15 @@
             gsub('meta http-equiv=Content-Type content="text/html; charset=windows-1252"', '').
             gsub('<>', '');
         %>
+            <script>
+              $.get("<%= url_for :controller => :produtos, :action => :renderfile, :file => "#{@produto.descricao_filename}"%>", function(data) {
+                 data.replace('meta http-equiv=Content-Type content="text/html; charset=windows-1252"', '');
+                 data.replace('  ', ' ');
+                 $("#descricao").html(data);
+
+               });
+
+            </script>
       <% else %>
         <%= @produto.descricao %>
       <% end %>
@@ -51,12 +60,3 @@
   </div>
 </div>
 
-<script>
-  $.get("<%= url_for :controller => :produtos, :action => :renderfile, :file => "#{@produto.descricao_filename}"%>", function(data) {
-     data.replace('meta http-equiv=Content-Type content="text/html; charset=windows-1252"', '');
-     data.replace('  ', ' ');
-     $("#descricao").html(data);
-
-   });
-            
-</script>
