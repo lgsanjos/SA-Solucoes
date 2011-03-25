@@ -2757,3 +2757,24 @@ Processing UsuariosController#login (for 127.0.0.1 at 2011-03-24 23:28:10) [GET]
 Rendering template within layouts/usuarios
 Rendering usuarios/login
 Completed in 83ms (View: 67, DB: 5) | 200 OK [http://localhost/admin]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProdutosController#renderfile (for 127.0.0.1 at 2011-03-24 23:45:48) [GET]
+  Parameters: {"file"=>"hello"}
+Completed in 33ms (View: 0, DB: 1) | 200 OK [http://localhost/produtos/renderfile/hello]
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProdutosController#renderfile (for 127.0.0.1 at 2011-03-24 23:45:50) [GET]
+  Parameters: {"file"=>"hello copia"}
+Completed in 33ms (View: 0, DB: 1) | 200 OK [http://localhost/produtos/renderfile/hello%20copia]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProdutosController#renderfile (for 127.0.0.1 at 2011-03-24 23:46:44) [GET]
+  Parameters: {"file"=>"hello copia"}
+Completed in 33ms (View: 0, DB: 1) | 200 OK [http://localhost/produtos/renderfile/hello%20copia]
