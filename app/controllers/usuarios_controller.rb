@@ -24,7 +24,7 @@ class UsuariosController < ApplicationController
       @usuario = Usuario.find_all_by_login_and_senha(params[:usuario][:login], params[:usuario][:senha]).first
       if @usuario.blank?
         flash[:notice] = 'Falha no login.'
-        redirect_to :controller => :login, :action => :login
+        redirect_to :controller => :usuarios, :action => :login
       else
         flash[:notice] = ''
         session[:adm] = @usuario
