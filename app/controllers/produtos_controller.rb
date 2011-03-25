@@ -149,7 +149,7 @@ class ProdutosController < ApplicationController
     render :layout => false
   end
 
-  def renderfile()
-    render :layout => false, :text => renderDescricao(params[:file])
+  def renderfile
+    render :layout => false, :text => renderdescricao(params[:file])
   end
 end
