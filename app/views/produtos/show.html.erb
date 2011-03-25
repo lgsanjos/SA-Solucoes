@@ -37,7 +37,7 @@
     </table>
     <div id="descricao" class="descricao" style="unicode-bidi: embed;">
       <% unless @produto.descricao_filename == nil %>
-        <% @prodDescricao  %>
+        <%= @prodDescricao  %>
             <script>
              /* $.post("<%#= url_for (:controller => :produtos, :action => :renderfile) %>", { file: "<%#= @produto.descricao_filename %>" },
                function(data) {
